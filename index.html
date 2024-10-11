@@ -16,11 +16,9 @@
   </head>
 
   <body>
-    <header class="header">
+    <header>
       <nav class="nav_bar">
-        <span class="welcome_text">
-          <p>WELCOME</p>
-        </span>
+        <p class="welcome_text">WELCOME</p>
         <ul class="nav_links">
           <li><a href="#home">Home</a></li>
           <li><a href="#about">About</a></li>
@@ -31,11 +29,16 @@
     </header>
 
     <main>
-      <section id="home" class="home_section">
+      <section id="home">
         <div class="image_container">
           <img
             id="my_photo"
             src="/assets/photos/351322367_245022038135748_1556129062014994545_n (1).jpg"
+            alt="My Photo"
+          />
+          <img
+            id="hover_photo"
+            src="/assets/photos/351322367_245022038135748_1556129062014994545_n (1)-modified.jpg"
             alt="My Photo"
           />
         </div>
@@ -119,74 +122,85 @@
       </section>
 
       <section id="about">
-        <table>
-          <tr>
-            <td>
-              <div>
-                <h2>My Qualifications</h2>
-                <ul>
-                  <li>
-                    <p>Graduated Diploma in Software Engineering</p>
-                    <p>Institute of Software Engineering (IJSE)</p>
-                    <p>2023 - 2024</p>
-                  </li>
-                  <li>
-                    <p>NVQ Level 4 in Hotel Food & Beverage</p>
-                    <p>National Vocational Training Authority</p>
-                  </li>
-                </ul>
+        <div class="about_container">
+          <div class="left_content">
+            <div>
+              <h2>My Qualifications</h2>
+              <ul>
+                <li>
+                  <p>Graduated Diploma in Software Engineering</p>
+                  <p>Institute of Software Engineering (IJSE)</p>
+                  <p>2023 - 2024</p>
+                </li>
+                <li>
+                  <p>NVQ Level 4 in Hotel Food & Beverage</p>
+                  <p>National Vocational Training Authority</p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="skill_container">
+              <div class="skill_circle my_skills">
+                <p>
+                  My Tech <br />
+                  Skills
+                </p>
               </div>
 
-              <div>
-                <h2>My Tech Skills</h2>
-                <ul>
-                  <li>
-                    <p>Java</p>
-                  </li>
-                  <li>
-                    <p>MySQL</p>
-                  </li>
-                  <li>
-                    <p>HTML</p>
-                  </li>
-                  <li>
-                    <p>CSS</p>
-                  </li>
-                  <li>
-                    <p>Figma</p>
-                  </li>
-                </ul>
+              <div class="skill_circle hover_skill">
+                <p>JavaScript</p>
               </div>
-            </td>
+              <div class="skill_circle hover_skill">
+                <p>CSS</p>
+              </div>
+              <div class="skill_circle hover_skill">
+                <p>Java</p>
+              </div>
+              <div class="skill_circle hover_skill">
+                <p>SQL</p>
+              </div>
+              <div class="skill_circle hover_skill">
+                <p>DBMS</p>
+              </div>
+              <div class="skill_circle hover_skill">
+                <p>OOP</p>
+              </div>
+              <div class="skill_circle hover_skill">
+                <p>HTML</p>
+              </div>
+              <div class="skill_circle hover_skill">
+                <p>Figma</p>
+              </div>
+            </div>
+          </div>
 
-            <td>
-              <div>
-                <h2>Employment</h2>
-                <ul>
-                  <li>
-                    <p>Willing to work as a Full Stack Developer</p>
-                    <p>2024</p>
-                  </li>
-                </ul>
-              </div>
+          <div class="right_content">
+            <div>
+              <h2>Employment</h2>
+              <ul>
+                <li>
+                  <p>Willing to work as a Full Stack Developer</p>
+                  <p>2024</p>
+                </li>
+              </ul>
+            </div>
 
-              <div>
-                <h2>My Hobbies</h2>
-                <ul>
-                  <li>
-                    <p>Spending time with friends.</p>
-                  </li>
-                  <li>
-                    <p>Watching movies.</p>
-                  </li>
-                  <li>
-                    <p>Reading new stories.</p>
-                  </li>
-                </ul>
-              </div>
-            </td>
-          </tr>
-        </table>
+            <div>
+              <h2>My Hobbies</h2>
+              <ul>
+                <li>
+                  <p>Spending time with friends.</p>
+                </li>
+                <li>
+                  <p>Watching movies.</p>
+                </li>
+                <li>
+                  <p>Reading new stories.</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section id="projects">
