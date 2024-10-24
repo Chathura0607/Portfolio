@@ -17,20 +17,22 @@
 
   <body>
     <header>
-      <nav class="nav_bar">
+      <div class="nav_bar">
         <p class="welcome_text">WELCOME</p>
-        <ul class="nav_links">
-          <li><a href="#home">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact Me</a></li>
-        </ul>
-      </nav>
+        <nav>
+          <ul>
+            <li><a href="#hero_section">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact Me</a></li>
+          </ul>
+        </nav>
+      </div>
     </header>
 
     <main>
-      <section id="home">
-        <div class="image_container">
+      <section id="hero_section">
+        <div class="hero_image_container">
           <img
             id="my_photo"
             src="/assets/photos/351322367_245022038135748_1556129062014994545_n (1).jpg"
@@ -42,7 +44,7 @@
             alt="My Photo"
           />
         </div>
-        <div class="text_container">
+        <div class="hero_content">
           <h4 id="hello_text">Hello!</h4>
           <h1 class="my_text">I AM <span id="name">CHATHURA LAKMINA</span></h1>
           <h3 class="my_text">Self-Taught Developer and Designer!</h3>
@@ -70,7 +72,7 @@
                 </div>
               </a>
             </div>
-            <div class="socials">
+            <div class="social_media_section">
               <a
                 class="socials_hover"
                 href="https://web.facebook.com/chathura.lakmina.14/"
@@ -126,15 +128,15 @@
           <div class="left_content">
             <div>
               <h2>My Qualifications</h2>
-              <ul>
+              <ul id="qualifications">
                 <li>
-                  <p>Graduated Diploma in Software Engineering</p>
-                  <p>Institute of Software Engineering (IJSE)</p>
-                  <p>2023 - 2024</p>
+                  <h4>Graduated Diploma in Software Engineering</h4>
+                  <h5>Institute of Software Engineering (IJSE)</h5>
+                  <h6>2023 - 2024</h6>
                 </li>
                 <li>
-                  <p>NVQ Level 4 in Hotel Food & Beverage</p>
-                  <p>National Vocational Training Authority</p>
+                  <h4>NVQ Level 4 in Hotel Food & Beverage</h4>
+                  <h5>National Vocational Training Authority</h5>
                 </li>
               </ul>
             </div>
@@ -143,7 +145,7 @@
               <div class="skill_circle my_skills">
                 <p>
                   My Tech <br />
-                  Skills
+                  <span id="skills">Skills</span>
                 </p>
               </div>
 
@@ -177,25 +179,25 @@
           <div class="right_content">
             <div>
               <h2>Employment</h2>
-              <ul>
+              <ul id="employment">
                 <li>
-                  <p>Willing to work as a Full Stack Developer</p>
-                  <p>2024</p>
+                  <h4>Willing to work as a Full Stack Developer</h4>
+                  <h6>2024</h6>
                 </li>
               </ul>
             </div>
 
             <div>
               <h2>My Hobbies</h2>
-              <ul>
+              <ul id="hobbies">
                 <li>
-                  <p>Spending time with friends.</p>
+                  <h5>Spending time with friends.</h5>
                 </li>
                 <li>
-                  <p>Watching movies.</p>
+                  <h5>Watching movies.</h5>
                 </li>
                 <li>
-                  <p>Reading new stories.</p>
+                  <h5>Reading new stories.</h5>
                 </li>
               </ul>
             </div>
