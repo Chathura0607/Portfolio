@@ -1,62 +1,16 @@
-@media screen and (min-width: 320px) and (max-width: 425px) {
-  #burger {
-    display: block;
-    cursor: pointer;
-    font-size: 1.875rem;
-    position: absolute;
-    top: 20px;
-    right: 20px;
-  }
-
+@media screen and (min-width: 426px) and (max-width: 768px) {
   nav ul {
     display: none;
   }
-
-  .menu_panel {
-    display: none;
-    height: 75vh;
-    width: 50%;
-    position: fixed;
-    right: 0;
-    z-index: 1000;
-    padding-top: 60px;
-  }
-
-  .menu_panel.active {
-    display: block;
-  }
-
-  .menu_panel ul {
-    list-style-type: none;
-  }
-
-  .menu_panel ul li {
-    display: block;
-    margin: 20px 0 75px;
-  }
-
-  .close_btn {
-    font-size: 3.125rem;
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    width: 50px;
-    height: 50px;
-    margin: 0;
-    padding: 0;
-  }
 }
 
-@media screen and (min-width: 426px) and (max-width: 768px) {
-}
-
-@media (max-width: 1024px) {
+@media screen and (max-width: 1024px) {
   header {
     font-size: 1.75rem;
-    padding-left: 15px;
+  }
+
+  .welcome_text {
+    padding-left: 8px;
   }
 
   #hello_text {
@@ -104,6 +58,10 @@
     margin-right: 75px;
   }
 
+  .skill_container {
+    margin-top: 50px;
+  }
+
   .project_carousel {
     gap: 10px;
     max-width: 850px;
@@ -111,5 +69,228 @@
 
   .project_slide img {
     height: 275px;
+  }
+
+  #projects {
+    height: 74vh;
+  }
+
+  #contact {
+    padding-bottom: 80px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 426px) {
+  header {
+    height: 50px;
+  }
+
+  .welcome_text {
+    font-size: 1.5rem;
+    padding-left: 0;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+  }
+
+  #burger {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5rem;
+    position: absolute;
+  }
+
+  .nav_bar {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 8px;
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .menu_panel {
+    display: none;
+    height: 60vh;
+    width: 50%;
+    position: fixed;
+    right: 0;
+    z-index: 1000;
+    padding-top: 60px;
+  }
+
+  .menu_panel.active {
+    display: block;
+  }
+
+  .menu_panel ul {
+    list-style-type: none;
+  }
+
+  .menu_panel ul li {
+    display: block;
+    margin: 20px 0 50px;
+  }
+
+  .close_btn {
+    font-size: 3.125rem;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    margin: 0;
+    padding: 0;
+  }
+
+  #hero_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero_image_container {
+    width: 300px;
+    height: 300px;
+  }
+
+  .social_media_section img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .resume {
+    width: 100px;
+    height: 30px;
+  }
+
+  .resume_content {
+    font-size: 0.875rem;
+  }
+
+  .resume_content img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .resume_social_container {
+    justify-content: right;
+    gap: 0;
+    position: absolute;
+    top: 550px;
+    margin-left: 35px;
+  }
+
+  .social_media_section {
+    gap: 10px;
+  }
+
+  #hello_text {
+    font-size: 2.25rem;
+    margin-left: auto;
+  }
+
+  h1.my_text {
+    text-align: center;
+    font-size: 2.625rem;
+  }
+
+  h3.my_text {
+    margin-left: auto;
+  }
+
+  .my_text {
+    font-size: 1.5rem;
+  }
+
+  .hero_content {
+    width: 100%;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .my_info_container {
+    display: block;
+    line-height: 24px;
+    margin-top: 65px;
+  }
+
+  .info_container {
+  }
+
+  .title {
+    font-size: 0.875rem;
+    margin-bottom: 5px;
+  }
+
+  .info {
+    font-size: 0.75rem;
+    font-family: "Times New Roman";
+    margin: 0px 0 0 15px;
+  }
+
+  .timeline_item::before {
+    left: -20px;
+    top: 6px;
+    width: 10px;
+    height: 10px;
+  }
+
+  #bio {
+    font-size: 0.75rem;
+    width: 300px;
+    margin-top: 0;
+  }
+
+  .about_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #about_heading {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  .skill_container {
+    width: 350px;
+    margin: auto;
+    top: -400px;
+  }
+
+  #skill_heading {
+    display: block;
+    text-align: center;
+  }
+
+  #qualifications_container {
+    position: relative;
+    top: 200px;
+  }
+
+  .project_slide {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .arrow.right {
+    right: 20px;
+  }
+
+  .form_wrapper {
+    display: none;
   }
 }
