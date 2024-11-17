@@ -166,7 +166,7 @@
   }
 
   .resume {
-    width: 100px;
+    width: 90px;
     height: 30px;
   }
 
@@ -183,7 +183,7 @@
     justify-content: right;
     gap: 0;
     position: absolute;
-    top: 550px;
+    top: 525px;
     margin-left: 35px;
   }
 
@@ -215,17 +215,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -25px;
   }
 
   .my_info_container {
     display: block;
     line-height: 24px;
-    margin-top: 65px;
+    margin-top: 50px;
   }
 
   .title {
     font-size: 0.875rem;
-    margin-bottom: 5px;
+    margin: 10px 0 0 0;
   }
 
   .info {
@@ -242,9 +243,13 @@
   }
 
   #bio {
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     width: 300px;
     margin-top: 0;
+  }
+
+  #about {
+    padding-top: 0;
   }
 
   .about_container {
@@ -265,17 +270,80 @@
   .skill_container {
     width: 350px;
     margin: auto;
-    top: -400px;
+    top: -250px;
   }
 
   #skill_heading {
     display: block;
     text-align: center;
+    position: relative;
+    top: -60px;
   }
 
   #qualifications_container {
+    display: flex;
+    flex-direction: column;
     position: relative;
-    top: 200px;
+    top: 340px;
+    align-items: center;
+  }
+
+  #qualifications {
+    margin-top: 0;
+    padding-left: 10px;
+  }
+
+  h4 {
+    font-size: 1.25rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+  }
+
+  h6 {
+    font-size: 0.875rem;
+  }
+
+  #employment_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 60px;
+  }
+
+  #employment {
+    margin-top: 0;
+    padding-left: 0;
+  }
+
+  .timeline::before {
+    top: 15px;
+    left: -12px;
+  }
+
+  .timeline_item::before {
+    left: -16px;
+  }
+
+  .right_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #hobbies_container {
+    position: relative;
+    top: 30px;
+  }
+
+  #hobbies_heading {
+    text-align: center;
+  }
+
+  #project_heading {
+    text-align: center;
   }
 
   .project_slide {
@@ -283,11 +351,82 @@
     flex-direction: column;
   }
 
+  .project_slide img {
+    max-width: 320px;
+    height: auto;
+  }
+
   .arrow.right {
     right: 20px;
   }
 
+  .arrow.left {
+    left: 20px;
+  }
+
+  .project_details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .project_details p {
+    line-height: 1.75rem;
+    margin-top: 0;
+  }
+
+  .project_details h3 {
+    margin: 20px 0 15px;
+  }
+
+  .project_details a {
+    margin-top: 20px;
+  }
+
   .form_wrapper {
-    display: none;
+    padding: 20px 0;
+    /* display: no; */
+  }
+
+  .form_row {
+    justify-content: space-around;
+    gap: 0;
+    margin-top: 30px;
+  }
+
+  input,
+  textarea {
+    width: 175px;
+  }
+
+  button {
+    margin: -60px 0;
+  }
+
+  .form_column {
+    flex-basis: 0;
+  }
+
+  label {
+    margin-bottom: 15px;
+  }
+
+  #contact {
+    padding: 205px 0 0;
+  }
+
+  .socials {
+    gap: 5px;
+  }
+
+  .form_socials {
+    width: 30px;
+    height: 30px;
+  }
+
+  #contact_heading {
+    text-align: center;
   }
 }
