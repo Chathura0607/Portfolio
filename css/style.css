@@ -494,6 +494,7 @@ h6 {
   top: 0;
   left: 0;
   visibility: hidden;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
   margin-top: 75px;
 }
 
@@ -507,6 +508,7 @@ h6 {
 .project_slide img {
   border-radius: 10px;
   max-width: 425px;
+  max-height: 250px;
   height: auto;
 }
 
