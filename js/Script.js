@@ -33,6 +33,7 @@ let characterIndex = 0;
 let isDeleting = false;
 
 function type() {
+    if(!typingElement) return;
     const currentPhrase = phrases[phraseIndex];
 
     if (isDeleting) {
@@ -47,7 +48,7 @@ function type() {
 
     if (!isDeleting && characterIndex === currentPhrase.length) {
         isDeleting = true;
-        typeSpeed = 2000; // Pause at end
+        typeSpeed = 2000;
     } else if (isDeleting && characterIndex === 0) {
         isDeleting = false;
         phraseIndex = (phraseIndex + 1) % phrases.length;
@@ -63,6 +64,7 @@ const footerPhrases = ["Thank You!", "Always Learning New Things!", "Let's build
 let footerIndex = 0;
 
 function rotateFooterText() {
+    if(!footerElement) return;
     footerElement.style.opacity = 0;
     setTimeout(() => {
         footerElement.textContent = footerPhrases[footerIndex];
@@ -71,19 +73,55 @@ function rotateFooterText() {
     }, 500);
 }
 
+// Age Calculation
+function calculateAge() {
+    const birthday = new Date('2002-06-07');
+    const today = new Date();
+    let age = today.getFullYear() - birthday.getFullYear();
+    const monthDiff = today.getMonth() - birthday.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthday.getDate())) {
+        age--;
+    }
+    const ageElement = document.getElementById('my-age');
+    if (ageElement) ageElement.textContent = age;
+}
+
 // Initialize animations
 window.addEventListener('load', () => {
     type();
+    calculateAge();
     rotateFooterText();
     setInterval(rotateFooterText, 3000);
 
-    // Reveal animations
-    gsap.from("nav a", {
-        y: -50,
+    // Simple Header Entrance
+    gsap.from("header", {
+        y: -100,
         opacity: 0,
         duration: 1,
-        stagger: 0.1,
-        ease: "power4.out"
+        ease: "power3.out"
+    });
+});
+
+// Magnetic Button Effect
+document.querySelectorAll('.shimmer').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+        const rect = btn.getBoundingClientRect();
+        const x = e.clientX - rect.left - rect.width / 2;
+        const y = e.clientY - rect.top - rect.height / 2;
+        gsap.to(btn, {
+            x: x * 0.3,
+            y: y * 0.3,
+            duration: 0.4,
+            ease: "power2.out"
+        });
+    });
+    btn.addEventListener('mouseleave', () => {
+        gsap.to(btn, {
+            x: 0,
+            y: 0,
+            duration: 0.6,
+            ease: "elastic.out(1, 0.3)"
+        });
     });
 });
 
