@@ -1,69 +1,102 @@
-//footer change
-const footerTextElement = document.getElementById("footer_text");
-const footerPhrases = ["THANK YOU!", "ALWAYS LEARNING NEW THINGS!"];
+// Initialize GSAP ScrollTrigger
+gsap.registerPlugin(ScrollTrigger);
+
+// Custom Cursor
+const setupCursor = () => {
+    const cursor = document.createElement('div');
+    cursor.className = 'fixed w-8 h-8 border-2 border-primary rounded-full pointer-events-none z-[9999] transition-transform duration-100 mix-blend-difference hidden md:block';
+    document.body.appendChild(cursor);
+
+    document.addEventListener('mousemove', (e) => {
+        gsap.to(cursor, {
+            x: e.clientX - 16,
+            y: e.clientY - 16,
+            duration: 0.1
+        });
+    });
+
+    document.querySelectorAll('a, button').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor.classList.add('scale-150', 'bg-primary'));
+        el.addEventListener('mouseleave', () => cursor.classList.remove('scale-150', 'bg-primary'));
+    });
+};
+
+if (!('ontouchstart' in window)) {
+    setupCursor();
+}
+
+// Typing Animation
+const typingElement = document.getElementById('typing-text');
+const phrases = ["Hey there!", "I'm a Developer", "I build AI solutions", "Welcome to my space"];
+let phraseIndex = 0;
+let characterIndex = 0;
+let isDeleting = false;
+
+function type() {
+    const currentPhrase = phrases[phraseIndex];
+
+    if (isDeleting) {
+        typingElement.textContent = currentPhrase.substring(0, characterIndex - 1);
+        characterIndex--;
+    } else {
+        typingElement.textContent = currentPhrase.substring(0, characterIndex + 1);
+        characterIndex++;
+    }
+
+    let typeSpeed = isDeleting ? 50 : 150;
+
+    if (!isDeleting && characterIndex === currentPhrase.length) {
+        isDeleting = true;
+        typeSpeed = 2000; // Pause at end
+    } else if (isDeleting && characterIndex === 0) {
+        isDeleting = false;
+        phraseIndex = (phraseIndex + 1) % phrases.length;
+        typeSpeed = 500;
+    }
+
+    setTimeout(type, typeSpeed);
+}
+
+// Footer Phrase Rotation
+const footerElement = document.getElementById('footer-phrase');
+const footerPhrases = ["Thank You!", "Always Learning New Things!", "Let's build the future!", "Stay Creative!"];
 let footerIndex = 0;
 
-function updateFooterText() {
-  footerIndex = (footerIndex + 1) % footerPhrases.length;
-  footerTextElement.textContent = footerPhrases[footerIndex];
+function rotateFooterText() {
+    footerElement.style.opacity = 0;
+    setTimeout(() => {
+        footerElement.textContent = footerPhrases[footerIndex];
+        footerElement.style.opacity = 1;
+        footerIndex = (footerIndex + 1) % footerPhrases.length;
+    }, 500);
 }
 
-setInterval(updateFooterText, 1500);
+// Initialize animations
+window.addEventListener('load', () => {
+    type();
+    rotateFooterText();
+    setInterval(rotateFooterText, 3000);
 
-//hello change
-const text = "Hello there!";
-const textElement = document.getElementById("hello_text");
-
-let index = 0;
-let direction = 1;
-
-function animateText() {
-  if (direction === 1 && index < text.length) {
-    index++;
-  } else if (direction === -1 && index > 0) {
-    index--;
-  } else {
-    direction *= -1;
-  }
-
-  textElement.textContent = `"${text.substring(0, index)}"`;
-  setTimeout(animateText, 200);
-}
-
-animateText();
-
-//menu panel
-const burger = document.getElementById("burger");
-const menuPanel = document.getElementById("menu_panel_id");
-const closeBtn = document.getElementById("btn_close");
-
-burger.addEventListener("click", () => {
-  menuPanel.classList.add("active");
+    // Reveal animations
+    gsap.from("nav a", {
+        y: -50,
+        opacity: 0,
+        duration: 1,
+        stagger: 0.1,
+        ease: "power4.out"
+    });
 });
 
-closeBtn.addEventListener("click", () => {
-  menuPanel.classList.remove("active");
-});
-
-//project change
-const slides = document.querySelectorAll(".project_slide");
-const leftArrow = document.querySelector(".arrow.left");
-const rightArrow = document.querySelector(".arrow.right");
-
-let currentIndex = 0;
-
-function updateSlides() {
-  slides.forEach((slide, index) => {
-    slide.classList.toggle("active", index === currentIndex);
-  });
-}
-
-leftArrow.addEventListener("click", () => {
-  currentIndex = (currentIndex - 1 + slides.length) % slides.length;
-  updateSlides();
-});
-
-rightArrow.addEventListener("click", () => {
-  currentIndex = (currentIndex + 1) % slides.length;
-  updateSlides();
+// Smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            window.scrollTo({
+                top: target.offsetTop - 80,
+                behavior: 'smooth'
+            });
+        }
+    });
 });
