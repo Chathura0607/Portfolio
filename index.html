@@ -163,7 +163,7 @@
 
     <main>
       <!-- Hero Section -->
-      <section id="home" class="min-h-screen flex items-center justify-center pt-20 relative overflow-hidden">
+      <section id="home" class="min-h-screen flex items-center justify-center pt-32 md:pt-20 relative overflow-hidden">
         <div class="absolute inset-0 z-0 overflow-hidden">
             <div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px]"></div>
             <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[120px]"></div>
@@ -171,7 +171,7 @@
 
         <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
           <div data-aos="fade-right">
-            <h3 id="typing-text" class="text-primary font-mono mb-4 h-6"></h3>
+            <h3 id="typing-text" class="text-primary font-mono mb-6 min-h-[24px] text-lg md:text-xl"></h3>
             <h1 class="text-6xl md:text-8xl font-heading leading-none mb-6">
               I AM <br />
               <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">CHATHURA</span> <br />
@@ -182,7 +182,7 @@
             </p>
             <div class="flex flex-wrap gap-4">
               <a href="#projects" class="px-8 py-4 bg-primary rounded-full font-bold hover:scale-105 transition-transform shadow-lg shadow-primary/30">View Projects</a>
-              <a href="/assets/cv/My_CV_Resume.pdf" target="_blank" class="px-8 py-4 border border-white/20 rounded-full font-bold hover:bg-white/5 transition-colors">Download CV</a>
+              <a href="/assets/cv/ChathuraLakmina_CV.pdf" target="_blank" class="px-8 py-4 border border-white/20 rounded-full font-bold hover:bg-white/5 transition-colors">Download CV</a>
             </div>
 
             <div class="mt-12 flex space-x-6 text-2xl text-gray-400">
@@ -253,6 +253,10 @@
                         <div class="relative pl-8 before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-primary before:rounded-full">
                             <h4 class="font-bold">Diploma in Software Engineering</h4>
                             <p class="text-gray-400">IJSE (2023 - 2024)</p>
+                        </div>
+                        <div class="relative pl-8 before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-primary before:rounded-full">
+                            <h4 class="font-bold">Primary & Secondary Education</h4>
+                            <p class="text-gray-400">St. Aloysius' College, Galle</p>
                         </div>
                         <div class="relative pl-8 before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-primary before:rounded-full">
                             <h4 class="font-bold">NVQ Level 4 - Hotel F&B</h4>
@@ -490,16 +494,26 @@
         aiMessages.appendChild(userMsg);
         aiInput.value = '';
 
-        // Bot response (Simulated)
+        // Bot response (Realistic Logic)
         setTimeout(() => {
             const botMsg = document.createElement('div');
             botMsg.className = "bg-white/5 p-3 rounded-2xl rounded-tl-none border border-white/10 text-sm";
-            let response = "That's a great question! Chathura is an expert in Java, Spring Boot, and Flutter. He loves working with AI.";
 
-            if(text.toLowerCase().includes('project')) {
-                response = "Chathura's most impressive project is the Museum AI Companion, which uses Google Gemini AI.";
-            } else if(text.toLowerCase().includes('contact')) {
-                response = "You can contact Chathura via the form below or through WhatsApp at +94 77 046 4448.";
+            const input = text.toLowerCase();
+            let response = "I'm Chathura's AI. I can tell you about his skills in Java, Spring Boot, Flutter, and AI. What would you like to know?";
+
+            if(input.includes('contact') || input.includes('email') || input.includes('reach')) {
+                response = "You can reach Chathura via email at chathuhiru45@gmail.com or use the contact form below. He's very responsive!";
+            } else if(input.includes('whatsapp') || input.includes('phone') || input.includes('number')) {
+                response = "Chathura's WhatsApp number is +94 77 046 4448. Feel free to message him for collaborations!";
+            } else if(input.includes('project') || input.includes('work') || input.includes('portfolio')) {
+                response = "Chathura has built several impressive projects! Most notably: 1. Museum AI Companion (Flutter/Gemini AI), 2. Sithumya School Bus System (Java), and 3. TechWave Mobile. Check the 'Featured Projects' section for more!";
+            } else if(input.includes('skill') || input.includes('tech') || input.includes('stack')) {
+                response = "He is a Full-stack pro! Expert in Java (Spring Boot), Dart (Flutter), Python, and modern web tech like React and Tailwind CSS.";
+            } else if(input.includes('who') || input.includes('about') || input.includes('chathura')) {
+                response = "Chathura Lakmina is a 22-year-old Full Stack Developer from Sri Lanka. He specializes in building intelligent systems with AI integration and scalable mobile/web apps.";
+            } else if(input.includes('hi') || input.includes('hello') || input.includes('hey')) {
+                response = "Hi there! I'm here to help you explore Chathura's professional world. How can I assist you today?";
             }
 
             botMsg.textContent = response;
