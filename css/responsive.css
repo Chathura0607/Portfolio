@@ -1,30 +1,205 @@
-/* Responsive Enhancements */
+/* Comprehensive Responsive Design System for Mobile, Tablet & Desktop */
+
+/* Base & Utility adjustments */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* ================= TABLET STYLES (768px - 1024px) ================= */
 @media (max-width: 1024px) {
+  /* Hero Section */
+  #home {
+    min-height: auto;
+    padding-top: 5rem;
+    padding-bottom: 3.5rem;
+  }
+
+  /* Bento Grid on Tablet */
   .bento-grid {
     grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1.25rem !important;
+  }
+
+  .bento-grid > div[class*="md:col-span-7"] {
+    grid-column: span 2 / span 2 !important;
+  }
+  .bento-grid > div[class*="md:col-span-5"] {
+    grid-column: span 2 / span 2 !important;
+  }
+  .bento-grid > div[class*="md:col-span-6"] {
+    grid-column: span 1 / span 1 !important;
+  }
+
+  /* Project Grid Tablet Spacing */
+  #projects-grid {
+    gap: 1.5rem !important;
+  }
+  
+  .project-card-inner {
+    border-radius: 24px !important;
+  }
+
+  /* AI Simulator */
+  #ai-hub {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
   }
 }
 
+/* ================= MOBILE & SMALL TABLET STYLES (max 768px) ================= */
 @media (max-width: 768px) {
-  .bento-grid {
-    grid-template-columns: 1fr !important;
-  }
-  
-  .ai-chat-card {
-    right: 16px;
-    bottom: 85px;
-    width: calc(100vw - 32px);
-    height: 480px;
+  /* Prevent any horizontal overflow */
+  html, body {
+    overflow-x: hidden !important;
+    width: 100vw;
+    position: relative;
   }
 
+  /* Navbar adjustments */
+  #main-header {
+    top: 0.75rem !important;
+  }
+
+  #main-header .glass-panel {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
+
+  /* Hero Section Typography */
+  h1 {
+    font-size: clamp(3.25rem, 12vw, 4.5rem) !important;
+    line-height: 0.95 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  /* Morph Avatar Responsive Sizing */
+  .morph-avatar {
+    width: 260px !important;
+    height: 260px !important;
+    margin: 0 auto;
+  }
+
+  /* Bento Grid Mobile 1-Column */
+  .bento-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .bento-grid > div {
+    grid-column: span 1 / span 1 !important;
+    padding: 1.25rem !important;
+    border-radius: 20px !important;
+  }
+
+  /* Skills Matrix 3-column on mobile */
+  #skills .grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+
+  .skill-card {
+    padding: 0.85rem 0.5rem !important;
+    border-radius: 16px !important;
+  }
+
+  .skill-card h4 {
+    font-size: 0.8rem !important;
+  }
+
+  .skill-card i {
+    font-size: 1.75rem !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  /* Project Cards on Mobile */
+  #projects-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.25rem !important;
+  }
+
+  .project-card .relative.h-64 {
+    height: 12rem !important;
+  }
+
+  .project-card .p-6, .project-card .sm\:p-8 {
+    padding: 1.25rem !important;
+  }
+
+  .project-card h3 {
+    font-size: 1.25rem !important;
+  }
+
+  /* Floating Chathura.AI Chat Widget on Mobile */
+  .ai-chat-card {
+    position: fixed !important;
+    bottom: 80px !important;
+    left: 12px !important;
+    right: 12px !important;
+    width: auto !important;
+    max-width: 100% !important;
+    height: 490px !important;
+    max-height: calc(100vh - 100px) !important;
+    border-radius: 20px !important;
+    z-index: 10000 !important;
+  }
+
+  #ai-chat-toggle {
+    width: 52px !important;
+    height: 52px !important;
+    bottom: 16px !important;
+    right: 16px !important;
+    font-size: 1.25rem !important;
+  }
+
+  /* Contact Form Mobile Optimization */
+  #contact .glass-panel {
+    padding: 1.25rem !important;
+    border-radius: 20px !important;
+  }
+
+  /* Input font size 16px to prevent iOS Safari auto-zoom */
+  input, textarea, select {
+    font-size: 16px !important;
+  }
+
+  /* Custom Cursor disable on touch */
   #custom-cursor-dot, #custom-cursor-outline {
     display: none !important;
   }
+
+  /* Quick highlights 3-column cards */
+  .grid-cols-3 {
+    gap: 0.5rem !important;
+  }
 }
 
-@media (max-width: 480px) {
+/* ================= SMALL PHONES (max 420px) ================= */
+@media (max-width: 420px) {
   h1 {
-    font-size: 3.5rem !important;
-    line-height: 1.05 !important;
+    font-size: 3rem !important;
+  }
+
+  /* Morph Avatar Compact */
+  .morph-avatar {
+    width: 220px !important;
+    height: 220px !important;
+  }
+
+  /* Skills Matrix 2-column on extra small phones */
+  #skills .grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  /* Button stacking on small screens */
+  .shimmer-btn, a[href*="cv"], #hero-ai-btn {
+    width: 100% !important;
+    justify-content: center !important;
+    text-align: center !important;
   }
 }
