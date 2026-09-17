@@ -3,713 +3,1317 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chathura Lakmina | Portfolio 2025</title>
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Chathura Lakmina | Full-Stack Developer & AI Solutions Engineer</title>
+    <meta name="title" content="Chathura Lakmina | Full-Stack Developer & AI Solutions Engineer" />
+    <meta name="description" content="Portfolio of Chathura Lakmina — Full-Stack Developer & AI Solutions Engineer specializing in React 19, TypeScript, Flutter, Java, Spring Boot, and Google Gemini AI integration." />
+    <meta name="keywords" content="Chathura Lakmina, Full-Stack Developer, AI Developer, Sri Lanka Developer, React 19, TypeScript, Flutter, FinFlow Pro, Zenexis POS, Museum App, GSS ODA AI, Portfolio" />
+    <meta name="author" content="Chathura Lakmina" />
+    <meta name="theme-color" content="#07090e" />
 
-    <!-- Modern Tech Stack -->
+    <!-- Open Graph / Facebook / LinkedIn -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://chathura0607.github.io/Portfolio/" />
+    <meta property="og:title" content="Chathura Lakmina | Full-Stack Developer & AI Solutions Engineer" />
+    <meta property="og:description" content="Explore cutting-edge projects: FinFlow Pro (AI Credit Risk ERP), Zenexis POS, Museum AI Companion, and GSS ODA AI Suite." />
+    <meta property="og:image" content="assets/photos/351322367_245022038135748_1556129062014994545_n (1).jpg" />
+
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://chathura0607.github.io/Portfolio/" />
+    <meta property="twitter:title" content="Chathura Lakmina | Portfolio" />
+    <meta property="twitter:description" content="Full-Stack Developer & AI Engineer building high-performance modern architectures." />
+    <meta property="twitter:image" content="assets/photos/351322367_245022038135748_1556129062014994545_n (1).jpg" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Chathura Lakmina",
+      "jobTitle": "Full-Stack Software Engineer & AI Solutions Architect",
+      "url": "https://chathura0607.github.io/Portfolio/",
+      "sameAs": [
+        "https://github.com/Chathura0607",
+        "https://www.linkedin.com/in/chathura-lakmina-72368b322/"
+      ],
+      "knowsAbout": ["React 19", "TypeScript", "Google Gemini AI", "Flutter", "Java", "Spring Boot", "IndexedDB", "Dexie.js", "Electron", "Tailwind CSS"]
+    }
+    </script>
+
+    <!-- Tailwind CSS with custom configuration -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
+        darkMode: 'class',
         theme: {
           extend: {
             colors: {
-              primary: '#b336ff',
-              secondary: '#6d28d9',
-              dark: '#0a0a0a',
-              accent: '#00d4ff',
+              primary: {
+                DEFAULT: '#a855f7',
+                50: '#faf5ff',
+                100: '#f3e8ff',
+                200: '#e9d5ff',
+                300: '#d8b4fe',
+                400: '#c084fc',
+                500: '#a855f7',
+                600: '#9333ea',
+                700: '#7e22ce',
+              },
+              secondary: '#6366f1',
+              cyanAccent: '#06b6d4',
+              emeraldAccent: '#10b981',
+              darkBg: '#07090e',
+              darkSurface: '#0f131d',
+              darkCard: 'rgba(18, 24, 38, 0.7)',
             },
             fontFamily: {
-              sans: ['Poppins', 'sans-serif'],
-              heading: ['Bebas Neue', 'cursive'],
+              sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+              heading: ['"Bebas Neue"', '"Outfit"', 'cursive'],
+              outfit: ['"Outfit"', 'sans-serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
             }
           }
         }
       }
     </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Bebas+Neue&family=JetBrains+Mono&display=swap" rel="stylesheet" />
+    <!-- Google Fonts, Icons, & Animation Libraries -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=JetBrains+Mono:wght@400;500;700&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
 
-    <style>
-      /* Custom styles that Tailwind doesn't cover or for specific effects */
-      .glass {
-        background: rgba(255, 255, 255, 0.03);
-        backdrop-filter: blur(12px);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-      }
-      .neon-border {
-        box-shadow: 0 0 15px rgba(179, 54, 255, 0.3);
-      }
-      .text-glow {
-        text-shadow: 0 0 10px rgba(179, 54, 255, 0.5);
-      }
-      .skill-card i {
-        filter: grayscale(1) brightness(0.8);
-        transition: all 0.3s ease;
-      }
-      .skill-card:hover i {
-        filter: grayscale(0) brightness(1) drop-shadow(0 0 8px currentColor);
-        transform: scale(1.2);
-      }
-      #loader {
-        position: fixed;
-        inset: 0;
-        z-index: 9999;
-        background: #000;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .loader-content {
-        text-align: center;
-      }
-      .loader-circle {
-        width: 100px;
-        height: 100px;
-        border: 4px solid #1a1a1a;
-        border-top: 4px solid #b336ff;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
-      @keyframes spin {
-        0% { transform: rotate(0deg); }
-        100% { transform: rotate(360deg); }
-      }
-      .bento-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: auto;
-        gap: 1.5rem;
-      }
-      @media (max-width: 768px) {
-        .bento-grid {
-          grid-template-columns: 1fr;
-        }
-      }
-      .floating-ai {
-        position: fixed;
-        bottom: 30px;
-        right: 30px;
-        z-index: 1000;
-      }
-      .ai-chat-window {
-        display: none;
-        position: fixed;
-        bottom: 100px;
-        right: 30px;
-        width: 350px;
-        height: 450px;
-        background: #1a1a1a;
-        border: 1px solid #b336ff;
-        border-radius: 20px;
-        flex-direction: column;
-        overflow: hidden;
-        box-shadow: 0 10px 40px rgba(0,0,0,0.8);
-        z-index: 1000;
-      }
-      @media (max-width: 480px) {
-        .ai-chat-window {
-          width: calc(100% - 40px);
-          right: 20px;
-          left: 20px;
-          height: 400px;
-          bottom: 100px;
-        }
-      }
-      .morph-photo {
-        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
-        overflow: hidden;
-        transition: all 0.5s ease-in-out;
-      }
-    </style>
+    <!-- External scripts for animations & confetti -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
   </head>
 
-  <body class="bg-dark text-white selection:bg-primary selection:text-white overflow-x-hidden">
-    <!-- Grain Overlay for Realism -->
-    <div class="fixed inset-0 pointer-events-none opacity-[0.03] z-[0] bg-[url('https://www.transparenttextures.com/patterns/stardust.png')]"></div>
+  <body class="bg-darkBg text-slate-100 selection:bg-purple-500 selection:text-white bg-grid-pattern relative">
+    
+    <!-- Custom Interactive Desktop Cursor -->
+    <div id="custom-cursor-dot" class="hidden md:block"></div>
+    <div id="custom-cursor-outline" class="hidden md:block"></div>
 
-    <!-- Preloader -->
-    <div id="loader">
-      <div class="loader-content">
-        <div class="loader-circle mb-4"></div>
-        <h2 class="font-heading text-2xl tracking-widest animate-pulse">CHATHURA</h2>
-      </div>
+    <!-- Ambient Glowing Orbs Background -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-0">
+      <div class="absolute -top-32 -right-32 w-[550px] h-[550px] bg-purple-600/15 rounded-full blur-[140px] animate-pulse"></div>
+      <div class="absolute top-1/3 -left-32 w-[450px] h-[450px] bg-cyan-500/10 rounded-full blur-[130px]"></div>
+      <div class="absolute -bottom-32 right-1/4 w-[500px] h-[500px] bg-indigo-600/12 rounded-full blur-[150px]"></div>
     </div>
 
-    <!-- Animated Navigation -->
-    <header class="fixed top-0 w-full z-[110] transition-all duration-300 glass border-b border-white/5">
-      <div class="max-w-7xl mx-auto px-6 py-2.5 flex justify-between items-center">
-        <div class="text-2xl font-heading tracking-tighter text-primary">
-          CL<span class="text-white">.</span>PORTFOLIO
-        </div>
-        <nav class="hidden md:flex space-x-10 font-medium">
-          <a href="#home" class="hover:text-primary transition-colors">Home</a>
-          <a href="#about" class="hover:text-primary transition-colors">About</a>
-          <a href="#projects" class="hover:text-primary transition-colors">Projects</a>
-          <a href="#contact" class="hover:text-primary transition-colors">Contact</a>
-        </nav>
-        <div class="md:hidden">
-            <button id="mobile-menu-btn" class="w-10 h-10 relative focus:outline-none z-[70]">
-                <span class="block w-5 absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2">
-                    <span id="line-1" class="block absolute h-0.5 w-7 bg-white transform transition duration-300 ease-in-out -translate-y-1.5"></span>
-                    <span id="line-2" class="block absolute h-0.5 w-7 bg-white transform transition duration-300 ease-in-out"></span>
-                    <span id="line-3" class="block absolute h-0.5 w-7 bg-white transform transition duration-300 ease-in-out translate-y-1.5"></span>
-                </span>
-            </button>
+    <!-- Toast Notification -->
+    <div id="toast-notification">
+      <i class="fa fa-check-circle text-emerald-400 text-lg"></i>
+      <span id="toast-message" class="text-sm font-medium">Copied to clipboard!</span>
+    </div>
+
+    <!-- Floating Navigation Bar -->
+    <header id="main-header" class="fixed top-4 left-0 right-0 z-[120] transition-all duration-300">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="glass-panel px-5 py-3 rounded-full flex justify-between items-center border border-white/10 shadow-2xl">
+          
+          <!-- Brand Logo -->
+          <a href="#home" class="flex items-center gap-2 group cursor-pointer">
+            <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-purple-600 via-primary to-cyan-400 flex items-center justify-center font-outfit font-black text-white text-base shadow-lg shadow-purple-500/30 group-hover:scale-105 transition-transform">
+              CL
+            </div>
+            <span class="font-outfit font-bold text-lg tracking-tight text-white group-hover:text-primary transition-colors">
+              CHATHURA<span class="text-cyanAccent">.</span>DEV
+            </span>
+          </a>
+
+          <!-- Desktop Navigation Menu -->
+          <nav class="hidden md:flex items-center gap-1 font-medium text-sm text-slate-300">
+            <a href="#home" class="nav-link px-4 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all">Home</a>
+            <a href="#about" class="nav-link px-4 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all">About</a>
+            <a href="#skills" class="nav-link px-4 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all">Skills</a>
+            <a href="#projects" class="nav-link px-4 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all">Projects</a>
+            <a href="#ai-hub" class="nav-link px-4 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all flex items-center gap-1.5 text-cyan-400">
+              <i class="fa fa-sparkles text-xs"></i> AI Hub
+            </a>
+            <a href="#contact" class="nav-link px-4 py-1.5 rounded-full hover:text-white hover:bg-white/5 transition-all">Contact</a>
+          </nav>
+
+          <!-- Right Action Items -->
+          <div class="hidden sm:flex items-center gap-3">
+            <div class="hidden lg:flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold">
+              <span class="w-2 h-2 rounded-full bg-emerald-400 online-pulse"></span>
+              <span>Available</span>
+            </div>
+            <a href="https://github.com/Chathura0607" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 hover:text-white hover:bg-white/10 transition-all hover:scale-105" title="GitHub Profile">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#contact" class="shimmer-btn px-4 py-1.5 bg-gradient-to-r from-primary to-purple-700 rounded-full text-xs font-bold text-white shadow-md shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105 transition-all">
+              Hire Me
+            </a>
+          </div>
+
+          <!-- Mobile Hamburger Button -->
+          <button id="mobile-toggle-btn" class="md:hidden w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white focus:outline-none" aria-label="Toggle Navigation Menu">
+            <i id="hamburger-icon" class="fa fa-bars text-lg"></i>
+          </button>
         </div>
       </div>
     </header>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="fixed inset-0 bg-black/95 backdrop-blur-xl z-[105] flex flex-col items-center justify-center space-y-6 text-3xl font-heading opacity-0 pointer-events-none transition-all duration-500">
-        <a href="#home" class="menu-item transform translate-y-10 opacity-0 hover:text-primary transition-all duration-300 tracking-widest uppercase">Home</a>
-        <a href="#about" class="menu-item transform translate-y-10 opacity-0 hover:text-primary transition-all duration-300 tracking-widest uppercase">About</a>
-        <a href="#projects" class="menu-item transform translate-y-10 opacity-0 hover:text-primary transition-all duration-300 tracking-widest uppercase">Projects</a>
-        <a href="#contact" class="menu-item transform translate-y-10 opacity-0 hover:text-primary transition-all duration-300 tracking-widest uppercase">Contact</a>
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-nav-drawer" class="fixed inset-0 bg-darkBg/95 backdrop-blur-2xl z-[115] flex flex-col justify-center items-center gap-6 text-2xl font-outfit font-semibold opacity-0 pointer-events-none transition-all duration-300">
+      <a href="#home" class="mobile-nav-item hover:text-primary transition-colors">Home</a>
+      <a href="#about" class="mobile-nav-item hover:text-primary transition-colors">About Myself</a>
+      <a href="#skills" class="mobile-nav-item hover:text-primary transition-colors">Tech Matrix</a>
+      <a href="#projects" class="mobile-nav-item hover:text-primary transition-colors">Featured Projects</a>
+      <a href="#ai-hub" class="mobile-nav-item hover:text-cyanAccent transition-colors flex items-center gap-2">
+        <i class="fa fa-robot text-cyanAccent"></i> AI Intelligence Hub
+      </a>
+      <a href="#contact" class="mobile-nav-item hover:text-primary transition-colors">Get In Touch</a>
 
-        <div class="flex space-x-6 mt-12 menu-item transform translate-y-10 opacity-0">
-            <a href="https://github.com/Chathura0607" target="_blank" class="text-2xl hover:text-primary"><i class="fab fa-github"></i></a>
-            <a href="https://linkedin.com" target="_blank" class="text-2xl hover:text-primary"><i class="fab fa-linkedin"></i></a>
-        </div>
+      <div class="flex items-center gap-4 mt-6">
+        <a href="https://github.com/Chathura0607" target="_blank" class="w-12 h-12 rounded-2xl glass-card flex items-center justify-center text-xl text-slate-300 hover:text-primary">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/chathura-lakmina-72368b322/" target="_blank" class="w-12 h-12 rounded-2xl glass-card flex items-center justify-center text-xl text-slate-300 hover:text-primary">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://wa.me/94770464448" target="_blank" class="w-12 h-12 rounded-2xl glass-card flex items-center justify-center text-xl text-emerald-400 hover:text-emerald-300">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+      </div>
     </div>
 
-    <main>
-      <!-- Hero Section -->
-      <section id="home" class="min-h-screen flex items-center justify-center pt-32 md:pt-24 relative overflow-hidden">
-        <div class="absolute inset-0 z-0 overflow-hidden">
-            <div class="absolute top-[-10%] right-[-10%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[120px]"></div>
-            <div class="absolute bottom-[-10%] left-[-10%] w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[120px]"></div>
-        </div>
+    <!-- MAIN CONTENT -->
+    <main class="relative z-10 pt-28">
 
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10">
-          <div data-aos="fade-right">
-            <h3 id="typing-text" class="text-primary font-mono mb-6 min-h-[24px] text-lg md:text-xl"></h3>
-            <h1 class="text-6xl md:text-8xl font-heading leading-none mb-6">
-              I AM <br />
-              <span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-accent">CHATHURA</span> <br />
-              LAKMINA
-            </h1>
-            <p class="text-lg text-gray-400 max-w-lg mb-10 leading-relaxed">
-              Crafting digital experiences through elegant code. Full-stack developer specializing in building scalable web and mobile applications with AI integration.
+      <!-- ================= HERO SECTION ================= -->
+      <section id="home" class="min-h-[90vh] flex items-center py-12 md:py-20 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 w-full">
+          <div class="grid lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Column: Intro & Headline -->
+            <div class="lg:col-span-7 space-y-6" data-aos="fade-right">
+              
+              <!-- Status Pill -->
+              <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-purple-950/40 border border-purple-500/30 text-purple-300 text-xs font-semibold tracking-wide shadow-inner">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                <span>Full-Stack Software Engineer & AI Specialist</span>
+              </div>
+
+              <!-- Animated Dynamic Headline -->
+              <div class="space-y-2">
+                <p class="font-mono text-cyanAccent text-base sm:text-lg flex items-center gap-2">
+                  <span class="text-purple-400">&gt;</span> <span id="typing-text">Full-Stack & AI Engineer</span>
+                </p>
+                <h1 class="text-5xl sm:text-7xl lg:text-8xl font-heading tracking-tight leading-[0.95] text-white">
+                  I AM <br />
+                  <span class="gradient-text-primary text-glow">CHATHURA</span> <br />
+                  <span class="text-slate-200">LAKMINA</span>
+                </h1>
+              </div>
+
+              <!-- Biography paragraph -->
+              <p class="text-slate-400 text-base sm:text-lg max-w-xl leading-relaxed">
+                Engineering high-performance enterprise systems, modern reactive web apps, offline-first desktop POS, and multimodal AI solutions powered by <span class="text-purple-300 font-semibold">Google Gemini</span>, <span class="text-cyan-300 font-semibold">React 19</span>, <span class="text-emerald-300 font-semibold">Flutter</span>, and <span class="text-indigo-300 font-semibold">TypeScript</span>.
+              </p>
+
+              <!-- Quick Highlights Grid -->
+              <div class="grid grid-cols-3 gap-3 pt-2 pb-2 max-w-lg">
+                <div class="glass-card p-3 rounded-2xl border border-white/5 text-center">
+                  <div class="font-outfit font-extrabold text-2xl text-purple-400">35+</div>
+                  <div class="text-[11px] text-slate-400 uppercase tracking-wider font-medium">Git Repos</div>
+                </div>
+                <div class="glass-card p-3 rounded-2xl border border-white/5 text-center">
+                  <div class="font-outfit font-extrabold text-2xl text-cyan-400">5+</div>
+                  <div class="text-[11px] text-slate-400 uppercase tracking-wider font-medium">Flagship Apps</div>
+                </div>
+                <div class="glass-card p-3 rounded-2xl border border-white/5 text-center">
+                  <div class="font-outfit font-extrabold text-2xl text-emerald-400">100%</div>
+                  <div class="text-[11px] text-slate-400 uppercase tracking-wider font-medium">Local-First/AI</div>
+                </div>
+              </div>
+
+              <!-- CTAs -->
+              <div class="flex flex-wrap items-center gap-4 pt-2">
+                <a href="#projects" class="shimmer-btn px-7 py-3.5 rounded-full bg-gradient-to-r from-primary via-purple-600 to-indigo-600 text-white font-outfit font-bold text-sm shadow-xl shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-105 transition-all flex items-center gap-2">
+                  <span>Explore Projects</span>
+                  <i class="fa fa-arrow-right text-xs"></i>
+                </a>
+                <a href="assets/cv/ChathuraLakmina_CV.pdf" target="_blank" class="px-7 py-3.5 rounded-full glass-card hover:bg-white/10 text-white font-outfit font-bold text-sm border border-white/10 hover:border-purple-500/40 transition-all flex items-center gap-2">
+                  <i class="fa fa-file-arrow-down text-purple-400"></i>
+                  <span>Download CV</span>
+                </a>
+                <button id="hero-ai-btn" class="px-5 py-3.5 rounded-full glass-card hover:bg-cyan-500/10 text-cyan-400 font-outfit font-bold text-sm border border-cyan-500/30 hover:border-cyan-400 transition-all flex items-center gap-2">
+                  <i class="fa fa-robot"></i>
+                  <span>Ask AI Assistant</span>
+                </button>
+              </div>
+
+              <!-- Social Links Row -->
+              <div class="flex items-center gap-4 pt-4 text-slate-400 text-lg">
+                <span class="text-xs uppercase tracking-widest font-mono text-slate-500">Connect:</span>
+                <a href="https://github.com/Chathura0607" target="_blank" class="hover:text-white hover:scale-110 transition-all" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/chathura-lakmina-72368b322/" target="_blank" class="hover:text-cyanAccent hover:scale-110 transition-all" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://wa.me/94770464448" target="_blank" class="hover:text-emerald-400 hover:scale-110 transition-all" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <button class="copy-email-btn hover:text-purple-400 hover:scale-110 transition-all" title="Copy Email Address"><i class="fa fa-envelope"></i></button>
+              </div>
+
+            </div>
+
+            <!-- Right Column: Interactive Holographic Avatar -->
+            <div class="lg:col-span-5 flex justify-center relative" data-aos="zoom-in" data-aos-delay="100">
+              
+              <!-- Ambient background ring -->
+              <div class="absolute inset-0 bg-gradient-to-tr from-purple-600/30 via-cyan-500/20 to-transparent rounded-full blur-2xl transform scale-110 pointer-events-none"></div>
+
+              <!-- Floating Tech Badges -->
+              <div class="absolute -top-4 -left-4 glass-panel px-3.5 py-1.5 rounded-2xl border border-purple-500/30 flex items-center gap-2 shadow-xl z-20 animate-bounce duration-1000">
+                <i class="devicon-react-original text-cyan-400 text-lg"></i>
+                <span class="text-xs font-bold text-slate-200">React 19 & TS</span>
+              </div>
+
+              <div class="absolute top-1/2 -right-6 glass-panel px-3.5 py-1.5 rounded-2xl border border-cyan-500/30 flex items-center gap-2 shadow-xl z-20">
+                <i class="fa fa-brain text-purple-400 text-sm"></i>
+                <span class="text-xs font-bold text-slate-200">Gemini 2.0 AI</span>
+              </div>
+
+              <div class="absolute -bottom-4 left-6 glass-panel px-3.5 py-1.5 rounded-2xl border border-emerald-500/30 flex items-center gap-2 shadow-xl z-20">
+                <i class="devicon-flutter-plain text-cyan-400 text-lg"></i>
+                <span class="text-xs font-bold text-slate-200">Flutter & Mobile</span>
+              </div>
+
+              <!-- Main Profile Image with Morphing Container -->
+              <div class="relative w-72 sm:w-80 md:w-96 aspect-square morph-avatar overflow-hidden border-2 border-purple-500/40 p-2 glass-panel">
+                <img
+                  src="assets/photos/351322367_245022038135748_1556129062014994545_n (1).jpg"
+                  alt="Chathura Lakmina Profile"
+                  class="w-full h-full object-cover rounded-[inherit] transition-transform duration-700 hover:scale-110"
+                />
+              </div>
+
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ================= ABOUT & BENTO GRID SECTION ================= -->
+      <section id="about" class="py-20 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          
+          <!-- Section Heading -->
+          <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+            <span class="text-xs font-mono uppercase tracking-widest text-purple-400 bg-purple-500/10 px-3.5 py-1 rounded-full border border-purple-500/20">
+              ENGINEERING PERSPECTIVE
+            </span>
+            <h2 class="text-4xl sm:text-5xl font-heading tracking-tight mt-4 text-white">
+              ABOUT <span class="gradient-text-primary">MYSELF</span> & CORE EXPERTISE
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base mt-3">
+              Combining architectural rigor with modern, user-first interfaces and practical artificial intelligence.
             </p>
-            <div class="flex flex-wrap gap-4">
-              <a href="#projects" class="px-8 py-4 bg-primary rounded-full font-bold hover:scale-105 transition-transform shadow-lg shadow-primary/30 shimmer">View Projects</a>
-              <a href="assets/cv/ChathuraLakmina_CV.pdf" target="_blank" class="px-8 py-4 border border-white/20 rounded-full font-bold hover:bg-white/5 transition-colors shimmer">Download CV</a>
-            </div>
-
-            <div class="mt-12 flex space-x-6 text-2xl text-gray-400">
-                <a href="https://github.com/Chathura0607" target="_blank" class="hover:text-primary transition-colors"><i class="fab fa-github"></i></a>
-                <a href="https://www.linkedin.com/in/chathura-lakmina-72368b322/" target="_blank" class="hover:text-primary transition-colors"><i class="fab fa-linkedin"></i></a>
-                <a href="https://wa.me/94770464448" target="_blank" class="hover:text-primary transition-colors"><i class="fab fa-whatsapp"></i></a>
-            </div>
           </div>
 
-          <div class="relative flex justify-center items-center" data-aos="zoom-in">
-            <div class="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
-            <div class="relative w-full max-w-[450px] aspect-square overflow-hidden morph-photo border-4 border-primary/20">
-              <img
-                src="assets/photos/351322367_245022038135748_1556129062014994545_n (1).jpg"
-                alt="Chathura Lakmina"
-                class="w-full h-full object-cover"
-              />
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Bento About Section -->
-      <section id="about" class="py-24 bg-black/50">
-        <div class="max-w-7xl mx-auto px-6">
-          <h2 class="text-5xl font-heading mb-16 text-center" data-aos="fade-up">ABOUT <span class="text-primary">MYSELF</span></h2>
-
-          <div class="bento-grid">
-            <!-- Experience -->
-            <div class="md:col-span-2 glass p-8 rounded-3xl" data-aos="fade-up">
-              <div class="flex items-center space-x-4 mb-6">
-                  <div class="w-12 h-12 bg-primary/20 rounded-xl flex items-center justify-center">
-                      <i class="fa fa-briefcase text-primary text-2xl"></i>
-                  </div>
-                  <h3 class="text-2xl font-bold">Experience</h3>
-              </div>
-              <div class="space-y-6">
-                  <div class="border-l-2 border-primary pl-6 py-2">
-                      <h4 class="font-bold text-lg">Full Stack Developer</h4>
-                      <p class="text-primary text-sm">2024 - Present</p>
-                      <p class="text-gray-400 mt-2">Specializing in modern web architectures and AI-driven solutions.</p>
-                  </div>
-              </div>
-            </div>
-
-            <!-- Skills -->
-            <div class="md:col-span-2 glass p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="100">
-              <h3 class="text-2xl font-bold mb-8">Tech Stack</h3>
-              <div class="flex flex-wrap gap-4">
-                <div class="skill-card group/skill flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl hover:border-primary hover:bg-primary/10 transition-all duration-300 cursor-default">
-                    <i class="devicon-java-plain colored text-xl group-hover/skill:scale-125 transition-transform"></i>
-                    <span class="font-medium">Java</span>
+          <!-- Bento Grid Layout -->
+          <div class="grid grid-cols-1 md:grid-cols-12 gap-6 bento-grid">
+            
+            <!-- Bento Card 1: Experience & Role (Span 7) -->
+            <div class="md:col-span-7 glass-card p-6 sm:p-8 rounded-3xl relative overflow-hidden" data-aos="fade-up">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-purple-400">
+                  <i class="fa fa-layer-group text-lg"></i>
                 </div>
-                <div class="skill-card group/skill flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl hover:border-primary hover:bg-primary/10 transition-all duration-300 cursor-default">
-                    <i class="devicon-springboot-plain colored text-xl group-hover/skill:scale-125 transition-transform"></i>
-                    <span class="font-medium">Spring Boot</span>
-                </div>
-                <div class="skill-card group/skill flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl hover:border-primary hover:bg-primary/10 transition-all duration-300 cursor-default">
-                    <i class="devicon-python-plain colored text-xl group-hover/skill:scale-125 transition-transform"></i>
-                    <span class="font-medium">Python</span>
-                </div>
-                <div class="skill-card group/skill flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl hover:border-primary hover:bg-primary/10 transition-all duration-300 cursor-default">
-                    <i class="devicon-flutter-plain colored text-xl group-hover/skill:scale-125 transition-transform"></i>
-                    <span class="font-medium">Flutter</span>
-                </div>
-                <div class="skill-card group/skill flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl hover:border-primary hover:bg-primary/10 transition-all duration-300 cursor-default">
-                    <i class="devicon-react-original colored text-xl group-hover/skill:scale-125 transition-transform"></i>
-                    <span class="font-medium">React</span>
-                </div>
-                <div class="skill-card group/skill flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl hover:border-primary hover:bg-primary/10 transition-all duration-300 cursor-default">
-                    <i class="devicon-firebase-plain colored text-xl group-hover/skill:scale-125 transition-transform"></i>
-                    <span class="font-medium">Firebase</span>
-                </div>
-                <div class="skill-card group/skill flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl hover:border-primary hover:bg-primary/10 transition-all duration-300 cursor-default">
-                    <i class="devicon-mysql-plain colored text-xl group-hover/skill:scale-125 transition-transform"></i>
-                    <span class="font-medium">MySQL</span>
-                </div>
-                <div class="skill-card group/skill flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl hover:border-primary hover:bg-primary/10 transition-all duration-300 cursor-default">
-                    <i class="devicon-tailwindcss-original colored text-xl group-hover/skill:scale-125 transition-transform"></i>
-                    <span class="font-medium">Tailwind CSS</span>
-                </div>
-                <div class="skill-card group/skill flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl hover:border-primary hover:bg-primary/10 transition-all duration-300 cursor-default">
-                    <i class="devicon-dart-plain colored text-xl group-hover/skill:scale-125 transition-transform"></i>
-                    <span class="font-medium">Dart</span>
-                </div>
-                <div class="skill-card group/skill flex items-center gap-2 px-4 py-2 bg-white/5 border border-white/10 rounded-xl hover:border-primary hover:bg-primary/10 transition-all duration-300 cursor-default">
-                    <i class="devicon-figma-plain colored text-xl group-hover/skill:scale-125 transition-transform"></i>
-                    <span class="font-medium">Figma</span>
-                </div>
-              </div>
-            </div>
-
-            <!-- Education -->
-            <div class="md:col-span-4 glass p-8 rounded-3xl grid md:grid-cols-2 gap-8" data-aos="fade-up" data-aos-delay="200">
                 <div>
-                    <h3 class="text-2xl font-bold mb-6">Education</h3>
-                    <div class="space-y-6">
-                        <div class="relative pl-8 before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-primary before:rounded-full">
-                            <h4 class="font-bold">Diploma in Software Engineering</h4>
-                            <p class="text-gray-400">IJSE (2023 - 2024)</p>
-                        </div>
-                        <div class="relative pl-8 before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-primary before:rounded-full">
-                            <h4 class="font-bold">Primary & Secondary Education</h4>
-                            <p class="text-gray-400">St. Aloysius' College, Galle</p>
-                        </div>
-                        <div class="relative pl-8 before:absolute before:left-0 before:top-2 before:w-3 before:h-3 before:bg-primary before:rounded-full">
-                            <h4 class="font-bold">NVQ Level 4 - Hotel F&B</h4>
-                            <p class="text-gray-400">NVTA</p>
-                        </div>
-                    </div>
+                  <h3 class="font-outfit font-bold text-xl text-white">Full-Stack & Systems Developer</h3>
+                  <p class="text-xs font-mono text-purple-400">2024 — PRESENT · SRI LANKA</p>
                 </div>
-                <div class="flex items-center justify-center">
-                    <div class="text-center bg-primary/10 p-10 rounded-3xl w-full border border-primary/20">
-                        <div id="my-age" class="text-6xl font-heading text-primary mb-2">22</div>
-                        <p class="text-gray-400 uppercase tracking-widest text-sm font-bold">Years of Age</p>
-                    </div>
-                </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Projects Section -->
-      <section id="projects" class="py-24">
-        <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-5xl font-heading mb-16" data-aos="fade-right">FEATURED <span class="text-primary">PROJECTS</span></h2>
-
-            <div class="grid md:grid-cols-2 gap-10">
-                <!-- Project 1 -->
-                <div class="project-card group glass rounded-[40px] overflow-hidden border border-white/5 hover:border-primary/30 transition-all duration-500" data-aos="fade-up">
-                    <div class="relative h-[300px] overflow-hidden">
-                        <img src="https://raw.githubusercontent.com/Chathura0607/Museum_App/main/assets/images/logo.png" alt="Museum AI Companion Logo" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x400/1a1a1a/b336ff?text=Museum+App'"/>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
-                        <div class="absolute top-6 right-6 px-4 py-2 bg-primary/80 backdrop-blur-md rounded-full text-xs font-bold uppercase">AI Powered</div>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-3xl font-heading mb-4 group-hover:text-primary transition-colors">Museum AI Companion</h3>
-                        <p class="text-gray-400 mb-6">A cutting-edge Flutter application integrating Google Gemini AI for real-time artifact identification, 3D visualization, and immersive museum tours.</p>
-                        <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-primary font-bold">Flutter</span>
-                            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-primary font-bold">Gemini AI</span>
-                            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-primary font-bold">AR/3D</span>
-                        </div>
-                        <a href="https://github.com/Chathura0607/Museum_App" target="_blank" class="inline-flex items-center space-x-2 text-primary font-bold hover:space-x-4 transition-all">
-                            <span>Explore Repository</span>
-                            <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card group glass rounded-[40px] overflow-hidden border border-white/5 hover:border-primary/30 transition-all duration-500" data-aos="fade-up" data-aos-delay="100">
-                    <div class="relative h-[300px] overflow-hidden">
-                        <img src="assets/photos/Screenshot 2024-09-04 004823.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" onerror="this.src='https://placehold.co/600x400/1a1a1a/b336ff?text=School+Bus+System'"/>
-                        <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"></div>
-                    </div>
-                    <div class="p-8">
-                        <h3 class="text-3xl font-heading mb-4 group-hover:text-primary transition-colors">Sithumya School Bus</h3>
-                        <p class="text-gray-400 mb-6">A robust management system built for scalability using Java and layered architecture. Secure and efficient database management.</p>
-                        <div class="flex flex-wrap gap-2 mb-8">
-                            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-primary font-bold">Java</span>
-                            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-primary font-bold">MySQL</span>
-                            <span class="text-xs bg-white/5 px-3 py-1 rounded-full text-primary font-bold">Layers</span>
-                        </div>
-                        <a href="https://github.com/Chathura0607/Sithumya_School_Bus_Service_Layered_Project.git" target="_blank" class="inline-flex items-center space-x-2 text-primary font-bold hover:space-x-4 transition-all">
-                            <span>Explore Source</span>
-                            <i class="fa fa-arrow-right"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="text-center mt-16">
-                <a href="https://github.com/Chathura0607" target="_blank" class="px-10 py-4 glass rounded-full hover:bg-white/5 transition-all inline-block border border-white/10">View All Repositories</a>
-            </div>
-        </div>
-      </section>
-
-      <!-- AI Features Section (Suggestion) -->
-      <section class="py-24 bg-primary/5">
-          <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
-              <div class="order-2 md:order-1" data-aos="fade-right">
-                  <div class="glass p-8 rounded-[40px] border-primary/20 relative overflow-hidden">
-                      <div class="absolute top-[-20%] right-[-20%] w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
-                      <div class="flex items-center space-x-4 mb-6">
-                          <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                          <p class="font-mono text-sm">Chathura.AI is online...</p>
-                      </div>
-                      <div id="dynamic-chat" class="space-y-4 min-h-[250px] flex flex-col justify-end">
-                          <!-- Chat messages will be injected here -->
-                      </div>
+              </div>
+              <p class="text-slate-300 text-sm sm:text-base leading-relaxed mb-4">
+                Specializing in building robust, zero-server local-first enterprise software, POS ecosystems, and AI-assisted workflows. Proven experience in crafting client-side databases (Dexie.js IndexedDB), reactive state stores, native Windows integration, and clean layered microservices.
+              </p>
+              <div class="grid grid-cols-2 gap-3 pt-2">
+                <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5">
+                  <div class="text-xs text-purple-300 font-semibold flex items-center gap-1.5 mb-1">
+                    <i class="fa fa-shield-halved"></i> Data Security
                   </div>
+                  <p class="text-xs text-slate-400">SHA-256 salted integrity & client-side vaulting.</p>
+                </div>
+                <div class="p-3 rounded-2xl bg-white/[0.03] border border-white/5">
+                  <div class="text-xs text-cyan-300 font-semibold flex items-center gap-1.5 mb-1">
+                    <i class="fa fa-bolt"></i> Local-First
+                  </div>
+                  <p class="text-xs text-slate-400">Sub-millisecond queries with zero latency.</p>
+                </div>
               </div>
-              <div class="order-1 md:order-2" data-aos="fade-left">
-                  <h2 class="text-5xl font-heading mb-6">SMART <span class="text-primary">SOLUTIONS</span></h2>
-                  <p class="text-xl text-gray-400 mb-8 leading-relaxed">
-                      I don't just write code; I build intelligent systems. By integrating Large Language Models (LLMs) and computer vision, I create applications that learn and adapt to user needs.
-                  </p>
-                  <ul class="space-y-4">
-                      <li class="flex items-center space-x-3 text-lg">
-                          <i class="fa fa-check-circle text-primary"></i>
-                          <span>AI Chatbot Integration</span>
-                      </li>
-                      <li class="flex items-center space-x-3 text-lg">
-                          <i class="fa fa-check-circle text-primary"></i>
-                          <span>Predictive Data Analysis</span>
-                      </li>
-                      <li class="flex items-center space-x-3 text-lg">
-                          <i class="fa fa-check-circle text-primary"></i>
-                          <span>Computer Vision Implementations</span>
-                      </li>
-                  </ul>
+            </div>
+
+            <!-- Bento Card 2: Dynamic Age & Location (Span 5) -->
+            <div class="md:col-span-5 glass-card p-6 sm:p-8 rounded-3xl flex flex-col justify-between" data-aos="fade-up" data-aos-delay="100">
+              <div>
+                <div class="flex items-center justify-between mb-4">
+                  <span class="text-xs font-mono uppercase tracking-wider text-slate-400">Personal Metrics</span>
+                  <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 online-pulse"></span>
+                </div>
+                <div class="flex items-baseline gap-3 my-2">
+                  <span id="my-age" class="text-6xl font-heading text-purple-400">22</span>
+                  <span class="text-sm font-outfit uppercase tracking-widest text-slate-400 font-bold">Years of Age</span>
+                </div>
+                <p class="text-xs text-slate-400 mt-2">Born June 7, 2002 · Driven by continuous curiosity & high engineering standards.</p>
               </div>
+
+              <div class="mt-6 pt-4 border-t border-white/5 flex items-center justify-between text-xs text-slate-300">
+                <div class="flex items-center gap-2">
+                  <i class="fa fa-location-dot text-cyan-400"></i>
+                  <span>Galle & Colombo, Sri Lanka</span>
+                </div>
+                <div class="flex items-center gap-2">
+                  <i class="fa fa-globe text-purple-400"></i>
+                  <span>GMT +5:30</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bento Card 3: Education & Training (Span 6) -->
+            <div class="md:col-span-6 glass-card p-6 sm:p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="150">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400">
+                  <i class="fa fa-graduation-cap text-lg"></i>
+                </div>
+                <h3 class="font-outfit font-bold text-xl text-white">Academic Qualifications</h3>
+              </div>
+              <div class="space-y-4">
+                <div class="border-l-2 border-purple-500/40 pl-4 py-1">
+                  <h4 class="font-bold text-sm text-slate-200">Diploma in Software Engineering (GDSE)</h4>
+                  <p class="text-xs text-purple-400 font-mono">IJSE (Institute of Software Engineering) · 2023 - 2024</p>
+                  <p class="text-xs text-slate-400 mt-1">Deep foundation in Java OOP, Database Architecture, MVC & Layered Design Patterns.</p>
+                </div>
+                <div class="border-l-2 border-cyan-500/40 pl-4 py-1">
+                  <h4 class="font-bold text-sm text-slate-200">Primary & Secondary Education</h4>
+                  <p class="text-xs text-cyan-400 font-mono">St. Aloysius' College, Galle</p>
+                </div>
+                <div class="border-l-2 border-emerald-500/40 pl-4 py-1">
+                  <h4 class="font-bold text-sm text-slate-200">NVQ Level 4 Certification</h4>
+                  <p class="text-xs text-emerald-400 font-mono">National Vocational Training Authority (NVTA)</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bento Card 4: Specialized Engineering Strengths (Span 6) -->
+            <div class="md:col-span-6 glass-card p-6 sm:p-8 rounded-3xl" data-aos="fade-up" data-aos-delay="200">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-10 h-10 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400">
+                  <i class="fa fa-microchip text-lg"></i>
+                </div>
+                <h3 class="font-outfit font-bold text-xl text-white">Engineering Philosophy</h3>
+              </div>
+              <div class="space-y-3">
+                <div class="p-3 rounded-2xl bg-white/[0.02] border border-white/5 flex items-start gap-3">
+                  <i class="fa fa-check text-emerald-400 text-xs mt-1"></i>
+                  <div>
+                    <h5 class="text-xs font-bold text-slate-200">Multimodal AI Integration</h5>
+                    <p class="text-xs text-slate-400">Harnessing Gemini Vision, prompt engineering, and intelligent rule-based fallback heuristics.</p>
+                  </div>
+                </div>
+                <div class="p-3 rounded-2xl bg-white/[0.02] border border-white/5 flex items-start gap-3">
+                  <i class="fa fa-check text-purple-400 text-xs mt-1"></i>
+                  <div>
+                    <h5 class="text-xs font-bold text-slate-200">High Reliability & Offline Resilience</h5>
+                    <p class="text-xs text-slate-400">Zero dependency on fragile cloud servers for critical point-of-sale and financial computations.</p>
+                  </div>
+                </div>
+                <div class="p-3 rounded-2xl bg-white/[0.02] border border-white/5 flex items-start gap-3">
+                  <i class="fa fa-check text-cyan-400 text-xs mt-1"></i>
+                  <div>
+                    <h5 class="text-xs font-bold text-slate-200">Modern Reactive Aesthetics</h5>
+                    <p class="text-xs text-slate-400">Combining smooth micro-interactions, responsive grids, and accessible UX design.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
+        </div>
       </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="py-24">
-          <div class="max-w-3xl mx-auto px-6 text-center">
-              <h2 class="text-6xl font-heading mb-6">LET'S <span class="text-primary">TALK</span></h2>
-              <p class="text-xl text-gray-400 mb-12">Have a project in mind or just want to say hi? My inbox is always open.</p>
 
-              <div class="glass p-10 rounded-[50px] border-white/5 shadow-2xl" data-aos="zoom-in">
-                  <form action="https://formspree.io/f/maqkkbvy" method="POST" id="contact-form" class="space-y-6">
-                      <div class="grid md:grid-cols-2 gap-6">
-                          <input type="text" name="name" placeholder="Your Name" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl focus:border-primary outline-none transition-all" required data-aos="fade-up" data-aos-delay="100" />
-                          <input type="email" name="email" placeholder="Your Email" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl focus:border-primary outline-none transition-all" required data-aos="fade-up" data-aos-delay="200" />
-                      </div>
-                      <textarea name="message" placeholder="Your Message" rows="5" class="w-full bg-white/5 border border-white/10 p-5 rounded-2xl focus:border-primary outline-none transition-all" required data-aos="fade-up" data-aos-delay="300"></textarea>
-                      <button type="submit" class="w-full py-5 bg-primary rounded-2xl font-bold text-xl hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-primary/20" data-aos="fade-up" data-aos-delay="400">Send Message</button>
-                  </form>
-              </div>
+      <!-- ================= SKILLS MATRIX SECTION ================= -->
+      <section id="skills" class="py-20 relative bg-black/40">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          
+          <div class="text-center max-w-2xl mx-auto mb-14" data-aos="fade-up">
+            <span class="text-xs font-mono uppercase tracking-widest text-cyan-400 bg-cyan-500/10 px-3.5 py-1 rounded-full border border-cyan-500/20">
+              CAPABILITIES & TOOLSET
+            </span>
+            <h2 class="text-4xl sm:text-5xl font-heading tracking-tight mt-4 text-white">
+              TECH <span class="gradient-text-cyan">MATRIX</span> & STACK
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base mt-3">
+              Modern programming languages, enterprise frameworks, AI models, and build tools I use daily.
+            </p>
           </div>
+
+          <!-- Skill Matrix Grid -->
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-3.5" data-aos="fade-up">
+            
+            <!-- React 19 -->
+            <div class="skill-card glass-card p-4 rounded-2xl text-center border border-white/5 hover:border-cyan-500/50">
+              <i class="devicon-react-original colored text-3xl mb-2 inline-block"></i>
+              <h4 class="font-outfit font-semibold text-sm text-slate-200">React 19</h4>
+              <p class="text-[10px] text-slate-400 uppercase tracking-wider font-mono">Frontend</p>
+            </div>
+
+            <!-- TypeScript -->
+            <div class="skill-card glass-card p-4 rounded-2xl text-center border border-white/5 hover:border-purple-500/50">
+              <i class="devicon-typescript-plain colored text-3xl mb-2 inline-block"></i>
+              <h4 class="font-outfit font-semibold text-sm text-slate-200">TypeScript</h4>
+              <p class="text-[10px] text-slate-400 uppercase tracking-wider font-mono">Language</p>
+            </div>
+
+            <!-- Flutter -->
+            <div class="skill-card glass-card p-4 rounded-2xl text-center border border-white/5 hover:border-cyan-500/50">
+              <i class="devicon-flutter-plain colored text-3xl mb-2 inline-block"></i>
+              <h4 class="font-outfit font-semibold text-sm text-slate-200">Flutter</h4>
+              <p class="text-[10px] text-slate-400 uppercase tracking-wider font-mono">Mobile App</p>
+            </div>
+
+            <!-- Dart -->
+            <div class="skill-card glass-card p-4 rounded-2xl text-center border border-white/5 hover:border-cyan-500/50">
+              <i class="devicon-dart-plain colored text-3xl mb-2 inline-block"></i>
+              <h4 class="font-outfit font-semibold text-sm text-slate-200">Dart</h4>
+              <p class="text-[10px] text-slate-400 uppercase tracking-wider font-mono">Mobile</p>
+            </div>
+
+            <!-- Google Gemini AI -->
+            <div class="skill-card glass-card p-4 rounded-2xl text-center border border-white/5 hover:border-purple-500/50">
+              <i class="fa fa-brain text-purple-400 text-3xl mb-2 inline-block"></i>
+              <h4 class="font-outfit font-semibold text-sm text-slate-200">Gemini AI</h4>
+              <p class="text-[10px] text-slate-400 uppercase tracking-wider font-mono">Multimodal</p>
+            </div>
+
+            <!-- Java -->
+            <div class="skill-card glass-card p-4 rounded-2xl text-center border border-white/5 hover:border-red-500/50">
+              <i class="devicon-java-plain colored text-3xl mb-2 inline-block"></i>
+              <h4 class="font-outfit font-semibold text-sm text-slate-200">Java</h4>
+              <p class="text-[10px] text-slate-400 uppercase tracking-wider font-mono">Backend</p>
+            </div>
+
+            <!-- Spring Boot -->
+            <div class="skill-card glass-card p-4 rounded-2xl text-center border border-white/5 hover:border-emerald-500/50">
+              <i class="devicon-springboot-plain colored text-3xl mb-2 inline-block"></i>
+              <h4 class="font-outfit font-semibold text-sm text-slate-200">Spring Boot</h4>
+              <p class="text-[10px] text-slate-400 uppercase tracking-wider font-mono">Framework</p>
+            </div>
+
+            <!-- Python -->
+            <div class="skill-card glass-card p-4 rounded-2xl text-center border border-white/5 hover:border-yellow-500/50">
+              <i class="devicon-python-plain colored text-3xl mb-2 inline-block"></i>
+              <h4 class="font-outfit font-semibold text-sm text-slate-200">Python</h4>
+              <p class="text-[10px] text-slate-400 uppercase tracking-wider font-mono">AI & Data</p>
+            </div>
+
+            <!-- Electron -->
+            <div class="skill-card glass-card p-4 rounded-2xl text-center border border-white/5 hover:border-cyan-500/50">
+              <i class="devicon-electron-original colored text-3xl mb-2 inline-block"></i>
+              <h4 class="font-outfit font-semibold text-sm text-slate-200">Electron.js</h4>
+              <p class="text-[10px] text-slate-400 uppercase tracking-wider font-mono">Desktop POS</p>
+            </div>
+
+            <!-- Dexie.js (IndexedDB) -->
+            <div class="skill-card glass-card p-4 rounded-2xl text-center border border-white/5 hover:border-amber-500/50">
+              <i class="fa fa-database text-amber-400 text-3xl mb-2 inline-block"></i>
+              <h4 class="font-outfit font-semibold text-sm text-slate-200">Dexie.js</h4>
+              <p class="text-[10px] text-slate-400 uppercase tracking-wider font-mono">Local DB</p>
+            </div>
+
+            <!-- Tailwind CSS -->
+            <div class="skill-card glass-card p-4 rounded-2xl text-center border border-white/5 hover:border-cyan-500/50">
+              <i class="devicon-tailwindcss-original colored text-3xl mb-2 inline-block"></i>
+              <h4 class="font-outfit font-semibold text-sm text-slate-200">Tailwind CSS</h4>
+              <p class="text-[10px] text-slate-400 uppercase tracking-wider font-mono">Styling</p>
+            </div>
+
+            <!-- MySQL -->
+            <div class="skill-card glass-card p-4 rounded-2xl text-center border border-white/5 hover:border-blue-500/50">
+              <i class="devicon-mysql-plain colored text-3xl mb-2 inline-block"></i>
+              <h4 class="font-outfit font-semibold text-sm text-slate-200">MySQL</h4>
+              <p class="text-[10px] text-slate-400 uppercase tracking-wider font-mono">RDBMS</p>
+            </div>
+
+            <!-- Firebase -->
+            <div class="skill-card glass-card p-4 rounded-2xl text-center border border-white/5 hover:border-amber-500/50">
+              <i class="devicon-firebase-plain colored text-3xl mb-2 inline-block"></i>
+              <h4 class="font-outfit font-semibold text-sm text-slate-200">Firebase</h4>
+              <p class="text-[10px] text-slate-400 uppercase tracking-wider font-mono">Cloud Backend</p>
+            </div>
+
+            <!-- Vite -->
+            <div class="skill-card glass-card p-4 rounded-2xl text-center border border-white/5 hover:border-purple-500/50">
+              <i class="devicon-vitejs-plain colored text-3xl mb-2 inline-block"></i>
+              <h4 class="font-outfit font-semibold text-sm text-slate-200">Vite</h4>
+              <p class="text-[10px] text-slate-400 uppercase tracking-wider font-mono">Bundler</p>
+            </div>
+
+            <!-- C# .NET Native -->
+            <div class="skill-card glass-card p-4 rounded-2xl text-center border border-white/5 hover:border-purple-500/50">
+              <i class="devicon-csharp-plain colored text-3xl mb-2 inline-block"></i>
+              <h4 class="font-outfit font-semibold text-sm text-slate-200">C# / .NET</h4>
+              <p class="text-[10px] text-slate-400 uppercase tracking-wider font-mono">Windows Native</p>
+            </div>
+
+            <!-- Git & GitHub -->
+            <div class="skill-card glass-card p-4 rounded-2xl text-center border border-white/5 hover:border-orange-500/50">
+              <i class="devicon-git-plain colored text-3xl mb-2 inline-block"></i>
+              <h4 class="font-outfit font-semibold text-sm text-slate-200">Git / GitHub</h4>
+              <p class="text-[10px] text-slate-400 uppercase tracking-wider font-mono">Version Control</p>
+            </div>
+
+            <!-- Figma -->
+            <div class="skill-card glass-card p-4 rounded-2xl text-center border border-white/5 hover:border-pink-500/50">
+              <i class="devicon-figma-plain colored text-3xl mb-2 inline-block"></i>
+              <h4 class="font-outfit font-semibold text-sm text-slate-200">Figma</h4>
+              <p class="text-[10px] text-slate-400 uppercase tracking-wider font-mono">UI/UX Design</p>
+            </div>
+
+            <!-- REST & WebSockets -->
+            <div class="skill-card glass-card p-4 rounded-2xl text-center border border-white/5 hover:border-emerald-500/50">
+              <i class="fa fa-network-wired text-emerald-400 text-3xl mb-2 inline-block"></i>
+              <h4 class="font-outfit font-semibold text-sm text-slate-200">REST / APIs</h4>
+              <p class="text-[10px] text-slate-400 uppercase tracking-wider font-mono">Integration</p>
+            </div>
+
+          </div>
+        </div>
       </section>
+
+
+      <!-- ================= FEATURED PROJECTS SHOWCASE ================= -->
+      <section id="projects" class="py-24 relative">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          
+          <!-- Section Heading -->
+          <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6" data-aos="fade-up">
+            <div>
+              <span class="text-xs font-mono uppercase tracking-widest text-purple-400 bg-purple-500/10 px-3.5 py-1 rounded-full border border-purple-500/20">
+                PORTFOLIO SHOWCASE
+              </span>
+              <h2 class="text-4xl sm:text-5xl font-heading tracking-tight mt-4 text-white">
+                FEATURED <span class="gradient-text-primary">PROJECTS</span>
+              </h2>
+              <p class="text-slate-400 text-sm sm:text-base mt-2">
+                Production-grade applications built with precision, intelligence, and modern aesthetics.
+              </p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="flex flex-wrap gap-2">
+              <button class="project-filter-btn active glass-pill px-4 py-1.5 rounded-full text-xs font-semibold text-white" data-filter="all">All (6)</button>
+              <button class="project-filter-btn glass-pill px-4 py-1.5 rounded-full text-xs font-semibold text-slate-400" data-filter="ai">AI & ML</button>
+              <button class="project-filter-btn glass-pill px-4 py-1.5 rounded-full text-xs font-semibold text-slate-400" data-filter="fullstack">Web & ERP</button>
+              <button class="project-filter-btn glass-pill px-4 py-1.5 rounded-full text-xs font-semibold text-slate-400" data-filter="desktop">Desktop POS</button>
+              <button class="project-filter-btn glass-pill px-4 py-1.5 rounded-full text-xs font-semibold text-slate-400" data-filter="mobile">Mobile (Flutter)</button>
+            </div>
+          </div>
+
+          <!-- Projects Grid -->
+          <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- PROJECT 1: FinFlow Pro -->
+            <div class="project-card group" data-category="ai fullstack desktop" data-aos="fade-up">
+              <div class="project-card-inner glass-card rounded-[32px] overflow-hidden border border-white/10 flex flex-col h-full">
+                
+                <!-- Visual Header -->
+                <div class="relative h-64 overflow-hidden bg-gradient-to-tr from-purple-950/60 via-darkSurface to-slate-900 flex items-center justify-center p-6">
+                  <div class="absolute inset-0 bg-grid-pattern opacity-30"></div>
+                  
+                  <!-- Graphic Mockup Preview -->
+                  <div class="relative z-10 text-center space-y-2 transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-purple-600/30 border border-purple-500/50 flex items-center justify-center shadow-lg shadow-purple-500/30">
+                      <i class="fa fa-building-columns text-purple-300 text-2xl"></i>
+                    </div>
+                    <span class="font-outfit font-extrabold text-2xl text-white tracking-tight block">FinFlow Pro</span>
+                    <span class="text-xs font-mono text-cyan-300 block">AI Credit Risk & Micro-Finance ERP</span>
+                  </div>
+
+                  <!-- Tag Badges -->
+                  <div class="absolute top-4 left-4 flex gap-2">
+                    <span class="px-3 py-1 rounded-full bg-purple-600/80 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider text-white shadow">
+                      ⭐ Flagship
+                    </span>
+                    <span class="px-3 py-1 rounded-full bg-cyan-500/30 border border-cyan-400/40 text-[11px] font-bold uppercase tracking-wider text-cyan-200">
+                      Gemini AI
+                    </span>
+                  </div>
+
+                  <div class="absolute bottom-4 right-4">
+                    <span class="px-2.5 py-1 rounded-lg bg-black/60 text-slate-300 text-[11px] font-mono border border-white/10">
+                      React 19 + TypeScript
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Content Body -->
+                <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
+                  <div>
+                    <h3 class="font-outfit font-bold text-2xl text-white group-hover:text-primary transition-colors flex items-center justify-between">
+                      <span>FinFlow Pro ERP</span>
+                      <a href="https://github.com/Chathura0607/FinFlow-Pro" target="_blank" class="text-slate-400 hover:text-white text-lg">
+                        <i class="fab fa-github"></i>
+                      </a>
+                    </h3>
+                    <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+                      Zero-server local-first micro-finance management system with a 4-factor AI credit scoring engine, Gemini AI copilot (Sinhala & English), 6-month cashflow predictor, PDF loan contracts, and standalone Windows desktop executable.
+                    </p>
+
+                    <!-- Tech Stack Badges -->
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      <span class="text-xs bg-purple-500/10 text-purple-300 border border-purple-500/20 px-2.5 py-1 rounded-full font-medium">React 19</span>
+                      <span class="text-xs bg-purple-500/10 text-purple-300 border border-purple-500/20 px-2.5 py-1 rounded-full font-medium">TypeScript</span>
+                      <span class="text-xs bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 px-2.5 py-1 rounded-full font-medium">Dexie.js IndexedDB</span>
+                      <span class="text-xs bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 px-2.5 py-1 rounded-full font-medium">Google Gemini</span>
+                      <span class="text-xs bg-white/5 text-slate-300 border border-white/10 px-2.5 py-1 rounded-full font-medium">Windows .NET</span>
+                    </div>
+                  </div>
+
+                  <!-- Actions -->
+                  <div class="pt-4 border-t border-white/5 flex items-center justify-between">
+                    <a href="https://github.com/Chathura0607/FinFlow-Pro" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-cyan-400 hover:text-cyan-300 transition-colors group-hover:gap-3">
+                      <span>Explore Repository</span>
+                      <i class="fa fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                    <span class="text-xs font-mono text-emerald-400 flex items-center gap-1.5">
+                      <i class="fa fa-shield-check"></i> SHA-256 Salted
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- PROJECT 2: Zenexis POS -->
+            <div class="project-card group" data-category="desktop fullstack" data-aos="fade-up" data-aos-delay="100">
+              <div class="project-card-inner glass-card rounded-[32px] overflow-hidden border border-white/10 flex flex-col h-full">
+                
+                <!-- Visual Header -->
+                <div class="relative h-64 overflow-hidden bg-gradient-to-tr from-cyan-950/60 via-darkSurface to-slate-900 flex items-center justify-center p-6">
+                  <div class="absolute inset-0 bg-grid-pattern opacity-30"></div>
+                  
+                  <div class="relative z-10 text-center space-y-2 transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-cyan-600/30 border border-cyan-500/50 flex items-center justify-center shadow-lg shadow-cyan-500/30">
+                      <i class="fa fa-cash-register text-cyan-300 text-2xl"></i>
+                    </div>
+                    <span class="font-outfit font-extrabold text-2xl text-white tracking-tight block">Zenexis POS</span>
+                    <span class="text-xs font-mono text-purple-300 block">Retail & Communication Center System</span>
+                  </div>
+
+                  <div class="absolute top-4 left-4 flex gap-2">
+                    <span class="px-3 py-1 rounded-full bg-cyan-600/80 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider text-white shadow">
+                      Desktop App
+                    </span>
+                    <span class="px-3 py-1 rounded-full bg-purple-500/30 border border-purple-400/40 text-[11px] font-bold uppercase tracking-wider text-purple-200">
+                      ESC/POS Thermal
+                    </span>
+                  </div>
+
+                  <div class="absolute bottom-4 right-4">
+                    <span class="px-2.5 py-1 rounded-lg bg-black/60 text-slate-300 text-[11px] font-mono border border-white/10">
+                      Electron 34 + React 19
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Content Body -->
+                <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
+                  <div>
+                    <h3 class="font-outfit font-bold text-2xl text-white group-hover:text-cyanAccent transition-colors flex items-center justify-between">
+                      <span>Zenexis POS Suite</span>
+                      <a href="https://github.com/Chathura0607/Zenexis_POS" target="_blank" class="text-slate-400 hover:text-white text-lg">
+                        <i class="fab fa-github"></i>
+                      </a>
+                    </h3>
+                    <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+                      Offline-first retail POS engineered for communication centers, printing hubs, and repair shops. Features 80mm/58mm thermal printing with CODE128 barcodes, 7-stage repair ticketing with WhatsApp alert generator, and telco reloads.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      <span class="text-xs bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 px-2.5 py-1 rounded-full font-medium">Electron 34</span>
+                      <span class="text-xs bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 px-2.5 py-1 rounded-full font-medium">React 19</span>
+                      <span class="text-xs bg-purple-500/10 text-purple-300 border border-purple-500/20 px-2.5 py-1 rounded-full font-medium">TypeScript</span>
+                      <span class="text-xs bg-purple-500/10 text-purple-300 border border-purple-500/20 px-2.5 py-1 rounded-full font-medium">ESC/POS</span>
+                      <span class="text-xs bg-white/5 text-slate-300 border border-white/10 px-2.5 py-1 rounded-full font-medium">Recharts Analytics</span>
+                    </div>
+                  </div>
+
+                  <div class="pt-4 border-t border-white/5 flex items-center justify-between">
+                    <a href="https://github.com/Chathura0607/Zenexis_POS" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-purple-400 hover:text-purple-300 transition-colors group-hover:gap-3">
+                      <span>Explore Repository</span>
+                      <i class="fa fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                    <span class="text-xs font-mono text-emerald-400 flex items-center gap-1.5">
+                      <i class="fab fa-whatsapp"></i> WhatsApp Dispatch
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- PROJECT 3: Museum AI Companion -->
+            <div class="project-card group" data-category="ai mobile" data-aos="fade-up">
+              <div class="project-card-inner glass-card rounded-[32px] overflow-hidden border border-white/10 flex flex-col h-full">
+                
+                <div class="relative h-64 overflow-hidden bg-gradient-to-tr from-emerald-950/60 via-darkSurface to-slate-900 flex items-center justify-center p-6">
+                  <div class="absolute inset-0 bg-grid-pattern opacity-30"></div>
+                  
+                  <div class="relative z-10 text-center space-y-2 transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-emerald-600/30 border border-emerald-500/50 flex items-center justify-center shadow-lg shadow-emerald-500/30">
+                      <i class="fa fa-landmark text-emerald-300 text-2xl"></i>
+                    </div>
+                    <span class="font-outfit font-extrabold text-2xl text-white tracking-tight block">Museum AI Companion</span>
+                    <span class="text-xs font-mono text-cyan-300 block">Flutter 3D AR & Gemini Exhibit Guide</span>
+                  </div>
+
+                  <div class="absolute top-4 left-4 flex gap-2">
+                    <span class="px-3 py-1 rounded-full bg-emerald-600/80 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider text-white shadow">
+                      Mobile App
+                    </span>
+                    <span class="px-3 py-1 rounded-full bg-cyan-500/30 border border-cyan-400/40 text-[11px] font-bold uppercase tracking-wider text-cyan-200">
+                      3D / AR
+                    </span>
+                  </div>
+
+                  <div class="absolute bottom-4 right-4">
+                    <span class="px-2.5 py-1 rounded-lg bg-black/60 text-slate-300 text-[11px] font-mono border border-white/10">
+                      Flutter + Firebase
+                    </span>
+                  </div>
+                </div>
+
+                <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
+                  <div>
+                    <h3 class="font-outfit font-bold text-2xl text-white group-hover:text-emerald-400 transition-colors flex items-center justify-between">
+                      <span>Museum AI Companion</span>
+                      <a href="https://github.com/Chathura0607/Museum_App" target="_blank" class="text-slate-400 hover:text-white text-lg">
+                        <i class="fab fa-github"></i>
+                      </a>
+                    </h3>
+                    <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+                      AI-powered museum companion app built with Flutter. Enhances visitor engagement with QR artifact scanning, Google Gemini AI exhibit context, 3D model visualization, audio guides (TTS), and English/Sinhala localization.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      <span class="text-xs bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 px-2.5 py-1 rounded-full font-medium">Flutter</span>
+                      <span class="text-xs bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 px-2.5 py-1 rounded-full font-medium">Dart</span>
+                      <span class="text-xs bg-purple-500/10 text-purple-300 border border-purple-500/20 px-2.5 py-1 rounded-full font-medium">Gemini AI</span>
+                      <span class="text-xs bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 px-2.5 py-1 rounded-full font-medium">3D Model Viewer</span>
+                      <span class="text-xs bg-white/5 text-slate-300 border border-white/10 px-2.5 py-1 rounded-full font-medium">Firebase Firestore</span>
+                    </div>
+                  </div>
+
+                  <div class="pt-4 border-t border-white/5 flex items-center justify-between">
+                    <a href="https://github.com/Chathura0607/Museum_App" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-emerald-400 hover:text-emerald-300 transition-colors group-hover:gap-3">
+                      <span>Explore Repository</span>
+                      <i class="fa fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                    <span class="text-xs font-mono text-cyan-400 flex items-center gap-1.5">
+                      <i class="fa fa-language"></i> Sinhala & English
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- PROJECT 4: GSS ODA AI Name Generator -->
+            <div class="project-card group" data-category="ai fullstack" data-aos="fade-up" data-aos-delay="100">
+              <div class="project-card-inner glass-card rounded-[32px] overflow-hidden border border-white/10 flex flex-col h-full">
+                
+                <div class="relative h-64 overflow-hidden bg-gradient-to-tr from-indigo-950/60 via-darkSurface to-slate-900 flex items-center justify-center p-6">
+                  <div class="absolute inset-0 bg-grid-pattern opacity-30"></div>
+                  
+                  <div class="relative z-10 text-center space-y-2 transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-indigo-600/30 border border-indigo-500/50 flex items-center justify-center shadow-lg shadow-indigo-500/30">
+                      <i class="fa fa-wand-magic-sparkles text-indigo-300 text-2xl"></i>
+                    </div>
+                    <span class="font-outfit font-extrabold text-2xl text-white tracking-tight block">GSS ODA AI Suite</span>
+                    <span class="text-xs font-mono text-cyan-300 block">Product Name Standardizer & Multimodal Vision</span>
+                  </div>
+
+                  <div class="absolute top-4 left-4 flex gap-2">
+                    <span class="px-3 py-1 rounded-full bg-indigo-600/80 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider text-white shadow">
+                      Multimodal AI
+                    </span>
+                    <span class="px-3 py-1 rounded-full bg-emerald-500/30 border border-emerald-400/40 text-[11px] font-bold uppercase tracking-wider text-emerald-200">
+                      FMCG Vision
+                    </span>
+                  </div>
+
+                  <div class="absolute bottom-4 right-4">
+                    <span class="px-2.5 py-1 rounded-lg bg-black/60 text-slate-300 text-[11px] font-mono border border-white/10">
+                      Gemini 2.0 Flash Vision
+                    </span>
+                  </div>
+                </div>
+
+                <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
+                  <div>
+                    <h3 class="font-outfit font-bold text-2xl text-white group-hover:text-indigo-400 transition-colors flex items-center justify-between">
+                      <span>GSS ODA AI Standardizer</span>
+                      <a href="https://github.com/Chathura0607/GSS-ODA-AI-Name-Generator" target="_blank" class="text-slate-400 hover:text-white text-lg">
+                        <i class="fab fa-github"></i>
+                      </a>
+                    </h3>
+                    <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+                      AI vision platform for Operational Data Analysts automating FMCG product naming from packaging images, PDFs, and ZIP archives. Enforces official GSS naming formulas, 49 container types dictionary, and 7-day retention vault.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      <span class="text-xs bg-indigo-500/10 text-indigo-300 border border-indigo-500/20 px-2.5 py-1 rounded-full font-medium">Gemini 2.0 Flash</span>
+                      <span class="text-xs bg-purple-500/10 text-purple-300 border border-purple-500/20 px-2.5 py-1 rounded-full font-medium">TypeScript</span>
+                      <span class="text-xs bg-cyan-500/10 text-cyan-300 border border-cyan-500/20 px-2.5 py-1 rounded-full font-medium">PDF & ZIP Parser</span>
+                      <span class="text-xs bg-emerald-500/10 text-emerald-300 border border-emerald-500/20 px-2.5 py-1 rounded-full font-medium">IndexedDB Vault</span>
+                      <span class="text-xs bg-white/5 text-slate-300 border border-white/10 px-2.5 py-1 rounded-full font-medium">Excel (.xlsx)</span>
+                    </div>
+                  </div>
+
+                  <div class="pt-4 border-t border-white/5 flex items-center justify-between">
+                    <a href="https://github.com/Chathura0607/GSS-ODA-AI-Name-Generator" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-indigo-400 hover:text-indigo-300 transition-colors group-hover:gap-3">
+                      <span>Explore Repository</span>
+                      <i class="fa fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                    <span class="text-xs font-mono text-purple-300 flex items-center gap-1.5">
+                      <i class="fa fa-bolt"></i> 49 Container Types
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- PROJECT 5: Sithumya School Bus -->
+            <div class="project-card group" data-category="fullstack desktop" data-aos="fade-up">
+              <div class="project-card-inner glass-card rounded-[32px] overflow-hidden border border-white/10 flex flex-col h-full">
+                
+                <div class="relative h-64 overflow-hidden bg-gradient-to-tr from-amber-950/60 via-darkSurface to-slate-900 flex items-center justify-center p-6">
+                  <div class="absolute inset-0 bg-grid-pattern opacity-30"></div>
+                  
+                  <div class="relative z-10 text-center space-y-2 transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-amber-600/30 border border-amber-500/50 flex items-center justify-center shadow-lg shadow-amber-500/30">
+                      <i class="fa fa-bus text-amber-300 text-2xl"></i>
+                    </div>
+                    <span class="font-outfit font-extrabold text-2xl text-white tracking-tight block">Sithumya Fleet Management</span>
+                    <span class="text-xs font-mono text-slate-400 block">Java Enterprise Layered Architecture</span>
+                  </div>
+
+                  <div class="absolute top-4 left-4">
+                    <span class="px-3 py-1 rounded-full bg-amber-600/80 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider text-white shadow">
+                      Enterprise Java
+                    </span>
+                  </div>
+
+                  <div class="absolute bottom-4 right-4">
+                    <span class="px-2.5 py-1 rounded-lg bg-black/60 text-slate-300 text-[11px] font-mono border border-white/10">
+                      Java + MySQL
+                    </span>
+                  </div>
+                </div>
+
+                <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
+                  <div>
+                    <h3 class="font-outfit font-bold text-2xl text-white group-hover:text-amber-400 transition-colors flex items-center justify-between">
+                      <span>Sithumya School Bus System</span>
+                      <a href="https://github.com/Chathura0607/Sithumya_School_Bus_Service_Layered_Project.git" target="_blank" class="text-slate-400 hover:text-white text-lg">
+                        <i class="fab fa-github"></i>
+                      </a>
+                    </h3>
+                    <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+                      Scalable school transport and fleet logistics desktop application developed with pure Java and layered software architecture. Incorporates driver scheduling, student route assignment, and JasperReports invoice generation.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      <span class="text-xs bg-amber-500/10 text-amber-300 border border-amber-500/20 px-2.5 py-1 rounded-full font-medium">Java</span>
+                      <span class="text-xs bg-amber-500/10 text-amber-300 border border-amber-500/20 px-2.5 py-1 rounded-full font-medium">Layered Pattern</span>
+                      <span class="text-xs bg-blue-500/10 text-blue-300 border border-blue-500/20 px-2.5 py-1 rounded-full font-medium">MySQL</span>
+                      <span class="text-xs bg-purple-500/10 text-purple-300 border border-purple-500/20 px-2.5 py-1 rounded-full font-medium">JasperReports</span>
+                    </div>
+                  </div>
+
+                  <div class="pt-4 border-t border-white/5 flex items-center justify-between">
+                    <a href="https://github.com/Chathura0607/Sithumya_School_Bus_Service_Layered_Project.git" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-amber-400 hover:text-amber-300 transition-colors group-hover:gap-3">
+                      <span>Explore Source</span>
+                      <i class="fa fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- PROJECT 6: Nexus Inn Hotel Suite -->
+            <div class="project-card group" data-category="fullstack desktop" data-aos="fade-up" data-aos-delay="100">
+              <div class="project-card-inner glass-card rounded-[32px] overflow-hidden border border-white/10 flex flex-col h-full">
+                
+                <div class="relative h-64 overflow-hidden bg-gradient-to-tr from-rose-950/60 via-darkSurface to-slate-900 flex items-center justify-center p-6">
+                  <div class="absolute inset-0 bg-grid-pattern opacity-30"></div>
+                  
+                  <div class="relative z-10 text-center space-y-2 transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="w-16 h-16 mx-auto rounded-2xl bg-rose-600/30 border border-rose-500/50 flex items-center justify-center shadow-lg shadow-rose-500/30">
+                      <i class="fa fa-hotel text-rose-300 text-2xl"></i>
+                    </div>
+                    <span class="font-outfit font-extrabold text-2xl text-white tracking-tight block">Nexus Inn ERP</span>
+                    <span class="text-xs font-mono text-slate-400 block">Hotel Management & Reservation Suite</span>
+                  </div>
+
+                  <div class="absolute top-4 left-4">
+                    <span class="px-3 py-1 rounded-full bg-rose-600/80 backdrop-blur-md text-[11px] font-bold uppercase tracking-wider text-white shadow">
+                      Hospitality ERP
+                    </span>
+                  </div>
+
+                  <div class="absolute bottom-4 right-4">
+                    <span class="px-2.5 py-1 rounded-lg bg-black/60 text-slate-300 text-[11px] font-mono border border-white/10">
+                      JavaFX + MySQL
+                    </span>
+                  </div>
+                </div>
+
+                <div class="p-6 sm:p-8 flex-1 flex flex-col justify-between space-y-6">
+                  <div>
+                    <h3 class="font-outfit font-bold text-2xl text-white group-hover:text-rose-400 transition-colors flex items-center justify-between">
+                      <span>Nexus Inn Hotel ERP</span>
+                      <a href="https://github.com/Chathura0607" target="_blank" class="text-slate-400 hover:text-white text-lg">
+                        <i class="fab fa-github"></i>
+                      </a>
+                    </h3>
+                    <p class="text-slate-300 text-sm mt-3 leading-relaxed">
+                      Desktop enterprise application tailored for hotel guest reservations, room inventory tracking, restaurant billing, and operational staff workflows with database transactional integrity.
+                    </p>
+
+                    <div class="flex flex-wrap gap-2 mt-4">
+                      <span class="text-xs bg-rose-500/10 text-rose-300 border border-rose-500/20 px-2.5 py-1 rounded-full font-medium">JavaFX</span>
+                      <span class="text-xs bg-rose-500/10 text-rose-300 border border-rose-500/20 px-2.5 py-1 rounded-full font-medium">MySQL</span>
+                      <span class="text-xs bg-purple-500/10 text-purple-300 border border-purple-500/20 px-2.5 py-1 rounded-full font-medium">MVC Architecture</span>
+                    </div>
+                  </div>
+
+                  <div class="pt-4 border-t border-white/5 flex items-center justify-between">
+                    <a href="https://github.com/Chathura0607" target="_blank" class="inline-flex items-center gap-2 text-sm font-bold text-rose-400 hover:text-rose-300 transition-colors group-hover:gap-3">
+                      <span>View GitHub Profile</span>
+                      <i class="fa fa-arrow-up-right-from-square text-xs"></i>
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Explore All On GitHub CTA -->
+          <div class="mt-16 text-center" data-aos="fade-up">
+            <a href="https://github.com/Chathura0607?tab=repositories" target="_blank" class="shimmer-btn inline-flex items-center gap-3 px-8 py-4 rounded-full glass-card hover:border-purple-500/50 text-white font-outfit font-bold text-base shadow-xl">
+              <i class="fab fa-github text-xl text-purple-400"></i>
+              <span>View All 35+ Repositories on GitHub</span>
+              <i class="fa fa-arrow-right text-xs text-purple-400"></i>
+            </a>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- ================= AI INTELLIGENCE HUB & SIMULATOR ================= -->
+      <section id="ai-hub" class="py-24 relative bg-purple-950/10 border-y border-white/5">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
+          
+          <div class="grid lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left: Description & Capabilities -->
+            <div class="lg:col-span-6 space-y-6" data-aos="fade-right">
+              <span class="text-xs font-mono uppercase tracking-widest text-cyan-400 bg-cyan-500/10 px-3.5 py-1 rounded-full border border-cyan-500/20">
+                INTELLIGENT COMPUTATION
+              </span>
+              <h2 class="text-4xl sm:text-5xl font-heading tracking-tight text-white leading-none">
+                SMART <span class="gradient-text-cyan">AI ARCHITECTURES</span> & COPILOTS
+              </h2>
+              <p class="text-slate-300 text-base leading-relaxed">
+                Rather than treating AI as an afterthought, I architect software where Large Language Models, Multimodal Vision, and predictive algorithms form the computational backbone.
+              </p>
+              
+              <div class="space-y-4 pt-2">
+                <div class="flex items-start gap-3">
+                  <div class="w-7 h-7 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 mt-0.5">
+                    <i class="fa fa-sparkles text-xs"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-white">Google Gemini Multimodal Vision & Underwriting</h4>
+                    <p class="text-xs text-slate-400 mt-0.5">Real-time artifact analysis in Flutter and credit-risk underwriting engines.</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-7 h-7 rounded-lg bg-cyan-500/20 flex items-center justify-center text-cyan-400 mt-0.5">
+                    <i class="fa fa-language text-xs"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-white">Bilingual Sinhala & English Intelligent Copilots</h4>
+                    <p class="text-xs text-slate-400 mt-0.5">Conversational assistants with domain-specific rule enforcement and fallback safety.</p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <div class="w-7 h-7 rounded-lg bg-emerald-500/20 flex items-center justify-center text-emerald-400 mt-0.5">
+                    <i class="fa fa-chart-line text-xs"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-sm font-bold text-white">Predictive Financial & Stock Modeling</h4>
+                    <p class="text-xs text-slate-400 mt-0.5">6-month revenue forecasting, anomaly detection, and restock velocity calculations.</p>
+                  </div>
+                </div>
+              </div>
+
+              <div class="pt-2">
+                <button id="open-ai-chat-btn" class="shimmer-btn px-6 py-3 rounded-full bg-gradient-to-r from-purple-600 to-cyan-600 text-white font-outfit font-bold text-sm shadow-lg shadow-purple-500/20 flex items-center gap-2">
+                  <i class="fa fa-comments"></i>
+                  <span>Test Chathura.AI Assistant</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Right: Interactive Live Simulation Box -->
+            <div class="lg:col-span-6" data-aos="fade-left">
+              <div class="glass-panel p-6 sm:p-8 rounded-[32px] border border-purple-500/30 relative overflow-hidden shadow-2xl">
+                
+                <div class="flex items-center justify-between pb-4 mb-4 border-b border-white/10">
+                  <div class="flex items-center gap-3">
+                    <div class="w-3 h-3 rounded-full bg-emerald-400 online-pulse"></div>
+                    <span class="font-mono text-xs text-slate-300">Chathura.AI Live Simulator</span>
+                  </div>
+                  <span class="text-[10px] font-mono text-purple-400 bg-purple-500/10 px-2 py-0.5 rounded border border-purple-500/20">Gemini Engine</span>
+                </div>
+
+                <!-- Simulation Chat Stream Container -->
+                <div id="simulation-chat-stream" class="space-y-4 min-h-[260px] flex flex-col justify-end">
+                  <!-- Injected via JavaScript -->
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+
+      <!-- ================= CONTACT & GET IN TOUCH ================= -->
+      <section id="contact" class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6">
+          
+          <div class="text-center max-w-2xl mx-auto mb-16" data-aos="fade-up">
+            <span class="text-xs font-mono uppercase tracking-widest text-emerald-400 bg-emerald-500/10 px-3.5 py-1 rounded-full border border-emerald-500/20">
+              LET'S COLLABORATE
+            </span>
+            <h2 class="text-4xl sm:text-6xl font-heading tracking-tight mt-4 text-white">
+              GET IN <span class="gradient-text-primary">TOUCH</span>
+            </h2>
+            <p class="text-slate-400 text-sm sm:text-base mt-2">
+              Have an ambitious project, freelance opportunity, or full-time position? Let's discuss how we can build it.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-12 gap-8 items-start">
+            
+            <!-- Direct Contact Info Cards (Span 5) -->
+            <div class="md:col-span-5 space-y-4" data-aos="fade-right">
+              
+              <!-- WhatsApp Card -->
+              <a href="https://wa.me/94770464448" target="_blank" class="glass-card p-5 rounded-2xl flex items-center gap-4 hover:border-emerald-500/50 block group">
+                <div class="w-12 h-12 rounded-xl bg-emerald-500/20 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-xl group-hover:scale-110 transition-transform">
+                  <i class="fab fa-whatsapp"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-mono text-slate-400 block uppercase">WhatsApp Direct</span>
+                  <span class="text-sm font-bold text-white group-hover:text-emerald-400 transition-colors">+94 77 046 4448</span>
+                </div>
+              </a>
+
+              <!-- Email Card -->
+              <div class="glass-card p-5 rounded-2xl flex items-center justify-between hover:border-purple-500/50 group">
+                <div class="flex items-center gap-4">
+                  <div class="w-12 h-12 rounded-xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center text-purple-400 text-xl group-hover:scale-110 transition-transform">
+                    <i class="fa fa-envelope"></i>
+                  </div>
+                  <div>
+                    <span class="text-xs font-mono text-slate-400 block uppercase">Email Address</span>
+                    <a href="mailto:chathuhiru45@gmail.com" class="text-sm font-bold text-white group-hover:text-purple-300 transition-colors">chathuhiru45@gmail.com</a>
+                  </div>
+                </div>
+                <button class="copy-email-btn text-xs text-slate-400 hover:text-white p-2 rounded-lg bg-white/5 border border-white/10 hover:bg-white/10" title="Copy to clipboard">
+                  <i class="fa fa-copy"></i>
+                </button>
+              </div>
+
+              <!-- LinkedIn Card -->
+              <a href="https://www.linkedin.com/in/chathura-lakmina-72368b322/" target="_blank" class="glass-card p-5 rounded-2xl flex items-center gap-4 hover:border-cyan-500/50 block group">
+                <div class="w-12 h-12 rounded-xl bg-cyan-500/20 border border-cyan-500/30 flex items-center justify-center text-cyan-400 text-xl group-hover:scale-110 transition-transform">
+                  <i class="fab fa-linkedin"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-mono text-slate-400 block uppercase">Professional Network</span>
+                  <span class="text-sm font-bold text-white group-hover:text-cyanAccent transition-colors">Chathura Lakmina</span>
+                </div>
+              </a>
+
+              <!-- Location Card -->
+              <div class="glass-card p-5 rounded-2xl flex items-center gap-4">
+                <div class="w-12 h-12 rounded-xl bg-indigo-500/20 border border-indigo-500/30 flex items-center justify-center text-indigo-400 text-xl">
+                  <i class="fa fa-location-dot"></i>
+                </div>
+                <div>
+                  <span class="text-xs font-mono text-slate-400 block uppercase">Location</span>
+                  <span class="text-sm font-bold text-white">Galle & Colombo, Sri Lanka</span>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Formspree Contact Form (Span 7) -->
+            <div class="md:col-span-7 glass-panel p-6 sm:p-8 rounded-3xl border border-white/10 shadow-2xl" data-aos="fade-left">
+              <form action="https://formspree.io/f/maqkkbvy" method="POST" id="main-contact-form" class="space-y-4">
+                
+                <div class="grid sm:grid-cols-2 gap-4">
+                  <div>
+                    <label class="block text-xs font-mono uppercase text-slate-400 mb-1.5" for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="John Doe" class="w-full bg-white/5 border border-white/10 px-4 py-3 rounded-xl focus:border-purple-500 focus:bg-purple-950/20 outline-none text-sm text-white placeholder-slate-500 transition-all" required />
+                  </div>
+                  <div>
+                    <label class="block text-xs font-mono uppercase text-slate-400 mb-1.5" for="email">Your Email</label>
+                    <input type="email" id="email" name="email" placeholder="john@example.com" class="w-full bg-white/5 border border-white/10 px-4 py-3 rounded-xl focus:border-purple-500 focus:bg-purple-950/20 outline-none text-sm text-white placeholder-slate-500 transition-all" required />
+                  </div>
+                </div>
+
+                <div>
+                  <label class="block text-xs font-mono uppercase text-slate-400 mb-1.5" for="subject">Subject / Project Type</label>
+                  <input type="text" id="subject" name="subject" placeholder="New Project / Job Opportunity" class="w-full bg-white/5 border border-white/10 px-4 py-3 rounded-xl focus:border-purple-500 focus:bg-purple-950/20 outline-none text-sm text-white placeholder-slate-500 transition-all" />
+                </div>
+
+                <div>
+                  <label class="block text-xs font-mono uppercase text-slate-400 mb-1.5" for="message">Your Message</label>
+                  <textarea id="message" name="message" rows="4" placeholder="Tell me about your goals, timeline, and requirements..." class="w-full bg-white/5 border border-white/10 p-4 rounded-xl focus:border-purple-500 focus:bg-purple-950/20 outline-none text-sm text-white placeholder-slate-500 transition-all" required></textarea>
+                </div>
+
+                <button type="submit" id="form-submit-btn" class="shimmer-btn w-full py-4 bg-gradient-to-r from-purple-600 to-indigo-600 rounded-xl font-outfit font-bold text-base text-white shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 hover:scale-[1.01] active:scale-[0.99] transition-all flex items-center justify-center gap-2">
+                  <i class="fa fa-paper-plane"></i>
+                  <span>Send Message</span>
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
     </main>
 
-    <footer class="py-12 border-t border-white/5 bg-black/80">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
-            <div class="text-2xl font-heading tracking-tighter text-primary mb-6 md:mb-0">
-                CL<span class="text-white">.</span>PORTFOLIO
+    <!-- ================= FOOTER ================= -->
+    <footer class="py-12 border-t border-white/10 bg-darkSurface/90 relative z-10">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+          
+          <div class="flex items-center gap-2">
+            <div class="w-8 h-8 rounded-xl bg-purple-600 flex items-center justify-center font-outfit font-black text-white text-sm">
+              CL
             </div>
-            <div class="text-center md:text-left">
-                <p id="footer-phrase" class="text-primary font-heading text-lg tracking-widest mb-2 transition-opacity duration-500 uppercase"></p>
-                <p class="text-gray-500 font-mono text-xs">&copy; 2025 Chathura Lakmina. All rights reserved.</p>
-            </div>
-            <div class="mt-6 md:mt-0 flex space-x-6">
-                <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="text-gray-400 hover:text-primary transition-colors"><i class="fab fa-instagram"></i></a>
-            </div>
+            <span class="font-outfit font-bold text-lg text-white">Chathura Lakmina</span>
+          </div>
+
+          <div class="text-center">
+            <p id="footer-rotating-phrase" class="font-outfit text-sm font-semibold gradient-text-primary uppercase tracking-wider min-h-[20px] transition-opacity duration-500">
+              Building the future of software with clean code & AI
+            </p>
+            <p class="text-xs text-slate-500 font-mono mt-1">
+              &copy; 2025–2026 Chathura Lakmina. All rights reserved.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <a href="https://github.com/Chathura0607" target="_blank" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/chathura-lakmina-72368b322/" target="_blank" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-slate-400 hover:text-cyanAccent transition-colors">
+              <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="#home" class="w-9 h-9 rounded-full glass-card flex items-center justify-center text-slate-400 hover:text-purple-400 transition-colors" title="Back to top">
+              <i class="fa fa-arrow-up text-xs"></i>
+            </a>
+          </div>
+
         </div>
+      </div>
     </footer>
 
-    <!-- AI Chatbot Button -->
-    <div class="floating-ai">
-        <button id="ai-toggle" class="w-16 h-16 bg-primary rounded-full shadow-2xl shadow-primary/40 flex items-center justify-center text-3xl hover:rotate-12 transition-all">
+    <!-- ================= FLOATING CHATHURA.AI ASSISTANT ================= -->
+    <div class="fixed bottom-6 right-6 z-[1000]">
+      <button id="ai-chat-toggle" class="w-14 h-14 rounded-full bg-gradient-to-tr from-purple-600 via-primary to-cyan-400 flex items-center justify-center text-white text-2xl shadow-2xl shadow-purple-500/40 hover:scale-110 active:scale-95 transition-all group" aria-label="Open AI Assistant">
+        <i class="fa fa-robot group-hover:rotate-12 transition-transform"></i>
+        <span class="absolute -top-1 -right-1 w-4 h-4 rounded-full bg-emerald-400 border-2 border-darkBg online-pulse"></span>
+      </button>
+    </div>
+
+    <!-- AI Chat Window -->
+    <div id="ai-chat-window" class="ai-chat-card">
+      
+      <!-- Chat Header -->
+      <div class="p-4 bg-gradient-to-r from-purple-900/80 to-darkSurface border-b border-purple-500/20 flex items-center justify-between rounded-t-[23px]">
+        <div class="flex items-center gap-2.5">
+          <div class="w-8 h-8 rounded-full bg-purple-600/40 border border-purple-400/50 flex items-center justify-center text-cyan-300 text-sm">
             <i class="fa fa-robot"></i>
+          </div>
+          <div>
+            <h4 class="font-outfit font-bold text-sm text-white flex items-center gap-1.5">
+              <span>Chathura.AI</span>
+              <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+            </h4>
+            <p class="text-[10px] font-mono text-purple-300">Intelligent Portfolio Copilot</p>
+          </div>
+        </div>
+        <button id="ai-chat-close" class="w-8 h-8 rounded-full hover:bg-white/10 flex items-center justify-center text-slate-400 hover:text-white transition-colors">
+          <i class="fa fa-times text-sm"></i>
         </button>
+      </div>
+
+      <!-- Quick Suggestion Chips -->
+      <div class="px-4 py-2 bg-darkSurface/60 border-b border-white/5 flex gap-1.5 overflow-x-auto text-[11px] scrollbar-none">
+        <button class="ai-quick-chip whitespace-nowrap px-2.5 py-1 rounded-full bg-purple-500/15 border border-purple-500/30 text-purple-300 hover:bg-purple-500/30 transition-all" data-prompt="Tell me about FinFlow Pro">🏦 FinFlow Pro</button>
+        <button class="ai-quick-chip whitespace-nowrap px-2.5 py-1 rounded-full bg-cyan-500/15 border border-cyan-500/30 text-cyan-300 hover:bg-cyan-500/30 transition-all" data-prompt="What is Zenexis POS?">⚡ Zenexis POS</button>
+        <button class="ai-quick-chip whitespace-nowrap px-2.5 py-1 rounded-full bg-emerald-500/15 border border-emerald-500/30 text-emerald-300 hover:bg-emerald-500/30 transition-all" data-prompt="Tell me about Museum App">🏛️ Museum App</button>
+        <button class="ai-quick-chip whitespace-nowrap px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 transition-all" data-prompt="What are your core skills?">💻 Skills</button>
+        <button class="ai-quick-chip whitespace-nowrap px-2.5 py-1 rounded-full bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 transition-all" data-prompt="How can I contact Chathura?">📬 Contact</button>
+      </div>
+
+      <!-- Messages Stream -->
+      <div id="ai-chat-messages" class="flex-1 p-4 overflow-y-auto space-y-3 font-sans text-sm">
+        <div class="bg-white/5 p-3.5 rounded-2xl rounded-tl-none border border-white/10 text-slate-200 text-xs leading-relaxed max-w-[90%]">
+          👋 Hello! I am <strong>Chathura.AI</strong>. Ask me anything about Chathura's enterprise projects (FinFlow Pro, Zenexis POS, Museum App, GSS ODA AI), tech stack, or get direct contact details!
+        </div>
+      </div>
+
+      <!-- Input Bar -->
+      <div class="p-3 bg-darkSurface/90 border-t border-white/10 rounded-b-[23px] flex items-center gap-2">
+        <input id="ai-user-input" type="text" placeholder="Ask about projects, AI, skills..." class="flex-1 bg-white/5 border border-white/10 px-3.5 py-2.5 rounded-xl text-xs text-white placeholder-slate-500 focus:outline-none focus:border-purple-500 transition-all" />
+        <button id="ai-send-btn" class="w-9 h-9 rounded-xl bg-gradient-to-r from-purple-600 to-primary flex items-center justify-center text-white hover:scale-105 active:scale-95 transition-all" aria-label="Send message">
+          <i class="fa fa-paper-plane text-xs"></i>
+        </button>
+      </div>
+
     </div>
 
-    <div id="ai-window" class="ai-chat-window">
-        <div class="p-4 bg-primary text-white flex justify-between items-center">
-            <span class="font-bold flex items-center"><i class="fa fa-microchip mr-2"></i> Chathura.AI</span>
-            <button id="ai-close"><i class="fa fa-times"></i></button>
-        </div>
-        <div id="ai-messages" class="flex-1 p-4 overflow-y-auto space-y-4 bg-dark">
-            <div class="bg-white/5 p-3 rounded-2xl rounded-tl-none border border-white/10 text-sm">
-                Hi! I'm Chathura's AI assistant. Ask me anything about his projects or skills!
-            </div>
-        </div>
-        <div class="p-4 bg-black/40 border-t border-white/10 flex space-x-2">
-            <input id="ai-input" type="text" placeholder="Type a message..." class="flex-1 bg-white/5 border border-white/10 p-3 rounded-xl outline-none text-sm focus:border-primary" />
-            <button id="ai-send" class="bg-primary px-4 rounded-xl"><i class="fa fa-paper-plane"></i></button>
-        </div>
-    </div>
-
+    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/Script.js"></script>
-    <script>
-      AOS.init({
-        duration: 1000,
-        once: true,
-      });
-
-      // Preloader
-      window.addEventListener('load', () => {
-        gsap.to("#loader", {
-          opacity: 0,
-          duration: 1,
-          onComplete: () => {
-            document.getElementById("loader").style.display = "none";
-          }
-        });
-      });
-
-      // Navigation scroll effect
-      const header = document.querySelector('header');
-      const headerInner = header.querySelector('div');
-      window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-          header.classList.add('bg-black/80', 'backdrop-blur-lg');
-          header.classList.remove('glass');
-          headerInner.classList.replace('py-2.5', 'py-2');
-        } else {
-          header.classList.remove('bg-black/80', 'backdrop-blur-lg');
-          header.classList.add('glass');
-          headerInner.classList.replace('py-2', 'py-2.5');
-        }
-      });
-
-      // AI Chat Logic
-      const aiToggle = document.getElementById('ai-toggle');
-      const aiWindow = document.getElementById('ai-window');
-      const aiClose = document.getElementById('ai-close');
-      const aiInput = document.getElementById('ai-input');
-      const aiSend = document.getElementById('ai-send');
-      const aiMessages = document.getElementById('ai-messages');
-
-      aiToggle.addEventListener('click', () => {
-        aiWindow.style.display = aiWindow.style.display === 'flex' ? 'none' : 'flex';
-      });
-
-      aiClose.addEventListener('click', () => {
-        aiWindow.style.display = 'none';
-      });
-
-      const handleSendMessage = () => {
-        const text = aiInput.value.trim();
-        if(!text) return;
-
-        // User message
-        const userMsg = document.createElement('div');
-        userMsg.className = "bg-primary/20 p-3 rounded-2xl rounded-tr-none border border-primary/20 ml-auto max-w-[85%] text-sm";
-        userMsg.textContent = text;
-        aiMessages.appendChild(userMsg);
-        aiInput.value = '';
-
-        // Bot response (Realistic Logic)
-        setTimeout(() => {
-            const botMsg = document.createElement('div');
-            botMsg.className = "bg-white/5 p-3 rounded-2xl rounded-tl-none border border-white/10 text-sm";
-
-            const input = text.toLowerCase();
-            let response = "I'm Chathura's AI. I can tell you about his skills in Java, Spring Boot, Flutter, and AI. What would you like to know?";
-
-            if(input.includes('contact') || input.includes('email') || input.includes('reach')) {
-                response = "You can reach Chathura via email at chathuhiru45@gmail.com or use the contact form below. He's very responsive!";
-            } else if(input.includes('whatsapp') || input.includes('phone') || input.includes('number')) {
-                response = "Chathura's WhatsApp number is +94 77 046 4448. Feel free to message him for collaborations!";
-            } else if(input.includes('project') || input.includes('work') || input.includes('portfolio')) {
-                response = "Chathura has built several impressive projects! Most notably: 1. Museum AI Companion (Flutter/Gemini AI), 2. Sithumya School Bus System (Java), and 3. TechWave Mobile. Check the 'Featured Projects' section for more!";
-            } else if(input.includes('skill') || input.includes('tech') || input.includes('stack')) {
-                response = "He is a Full-stack pro! Expert in Java (Spring Boot), Dart (Flutter), Python, and modern web tech like React and Tailwind CSS.";
-            } else if(input.includes('who') || input.includes('about') || input.includes('chathura')) {
-                response = "Chathura Lakmina is a 22-year-old Full Stack Developer from Sri Lanka. He specializes in building intelligent systems with AI integration and scalable mobile/web apps.";
-            } else if(input.includes('hi') || input.includes('hello') || input.includes('hey')) {
-                response = "Hi there! I'm here to help you explore Chathura's professional world. How can I assist you today?";
-            }
-
-            botMsg.textContent = response;
-            aiMessages.appendChild(botMsg);
-            aiMessages.scrollTop = aiMessages.scrollHeight;
-        }, 1000);
-      };
-
-      aiSend.addEventListener('click', handleSendMessage);
-      aiInput.addEventListener('keypress', (e) => { if(e.key === 'Enter') handleSendMessage(); });
-
-      // Contact Form Submission Logic
-      const contactForm = document.getElementById('contact-form');
-      contactForm.addEventListener('submit', async (e) => {
-          e.preventDefault();
-          const btn = contactForm.querySelector('button');
-          const formData = new FormData(contactForm);
-
-          btn.disabled = true;
-          btn.innerHTML = '<i class="fa fa-spinner animate-spin mr-2"></i> SENDING...';
-
-          try {
-              const response = await fetch(contactForm.action, {
-                  method: 'POST',
-                  body: formData,
-                  headers: { 'Accept': 'application/json' }
-              });
-
-              if (response.ok) {
-                  btn.innerHTML = 'MESSAGE SENT! ✓';
-                  btn.style.backgroundColor = '#10b981';
-                  contactForm.reset();
-              } else {
-                  throw new Error();
-              }
-          } catch (error) {
-              btn.innerHTML = 'ERROR! TRY AGAIN';
-              btn.style.backgroundColor = '#ef4444';
-          } finally {
-              setTimeout(() => {
-                  btn.disabled = false;
-                  btn.innerHTML = 'SEND MESSAGE';
-                  btn.style.backgroundColor = '';
-              }, 4000);
-          }
-      });
-
-      // Mobile Menu Logic
-      const mobileBtn = document.getElementById('mobile-menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const menuItems = document.querySelectorAll('.menu-item');
-      const line1 = document.getElementById('line-1');
-      const line2 = document.getElementById('line-2');
-      const line3 = document.getElementById('line-3');
-
-      let isMenuOpen = false;
-
-      const toggleMenu = () => {
-          isMenuOpen = !isMenuOpen;
-
-          if(isMenuOpen) {
-              // Burger to X
-              line1.classList.add('rotate-45', 'translate-y-0', 'bg-primary');
-              line1.classList.remove('-translate-y-1.5', 'bg-white');
-              line2.classList.add('opacity-0');
-              line3.classList.add('-rotate-45', 'translate-y-0', 'bg-primary');
-              line3.classList.remove('translate-y-1.5', 'bg-white');
-
-              // Show Menu
-              mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
-              mobileMenu.classList.add('opacity-100');
-
-              // Stagger Animate Items
-              gsap.to(".menu-item", {
-                  y: 0,
-                  opacity: 1,
-                  duration: 0.5,
-                  stagger: 0.1,
-                  ease: "power2.out"
-              });
-
-              document.body.style.overflow = 'hidden';
-          } else {
-              // X to Burger
-              line1.classList.remove('rotate-45', 'translate-y-0', 'bg-primary');
-              line1.classList.add('-translate-y-1.5', 'bg-white');
-              line2.classList.remove('opacity-0');
-              line3.classList.remove('-rotate-45', 'translate-y-0', 'bg-primary');
-              line3.classList.add('translate-y-1.5', 'bg-white');
-
-              // Hide Menu
-              mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-              mobileMenu.classList.remove('opacity-100');
-
-              // Reset items
-              gsap.set(".menu-item", { y: 40, opacity: 0 });
-
-              document.body.style.overflow = 'auto';
-          }
-      };
-
-      mobileBtn.addEventListener('click', toggleMenu);
-      menuItems.forEach(item => item.addEventListener('click', () => {
-          if(isMenuOpen) toggleMenu();
-      }));
-
-      // Dynamic Smart Solutions Chat
-      const dynamicChat = document.getElementById('dynamic-chat');
-      const chatScenarios = [
-          [
-              { type: 'bot', text: 'How can I help you today?' },
-              { type: 'user', text: "Tell me about Chathura's AI experience." },
-              { type: 'bot', text: 'Chathura has integrated Google Gemini AI into his Museum Companion app for real-time artifact insights.' }
-          ],
-          [
-              { type: 'bot', text: 'Hello! Looking for a developer?' },
-              { type: 'user', text: 'Does Chathura work with Flutter?' },
-              { type: 'bot', text: 'Yes! He uses Flutter for cross-platform apps, including his AI-powered Museum project.' }
-          ],
-          [
-              { type: 'bot', text: 'Need help with complex systems?' },
-              { type: 'user', text: 'Tell me about Sithumya School Bus.' },
-              { type: 'bot', text: 'That is a robust Java-based management system focusing on scalable backend architecture.' }
-          ]
-      ];
-
-      let scenarioIndex = 0;
-
-      function updateSmartChat() {
-          const scenario = chatScenarios[scenarioIndex];
-          dynamicChat.innerHTML = '';
-
-          scenario.forEach((msg, i) => {
-              setTimeout(() => {
-                  const msgDiv = document.createElement('div');
-                  if(msg.type === 'bot') {
-                      msgDiv.className = "bg-white/5 p-4 rounded-2xl rounded-tl-none border border-white/10 max-w-[80%] opacity-0 transform translate-y-4 transition-all duration-500";
-                  } else {
-                      msgDiv.className = "bg-primary/20 p-4 rounded-2xl rounded-tr-none border border-primary/20 ml-auto max-w-[80%] opacity-0 transform translate-y-4 transition-all duration-500";
-                  }
-                  msgDiv.textContent = msg.text;
-                  dynamicChat.appendChild(msgDiv);
-
-                  // Trigger animation
-                  setTimeout(() => {
-                      msgDiv.classList.remove('opacity-0', 'translate-y-4');
-                  }, 50);
-              }, i * 1500);
-          });
-
-          scenarioIndex = (scenarioIndex + 1) % chatScenarios.length;
-      }
-
-      updateSmartChat();
-      setInterval(updateSmartChat, 8000);
-    </script>
   </body>
 </html>
