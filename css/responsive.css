@@ -1,0 +1,8 @@
+/* Responsiveness is now handled via Tailwind CSS in index.html */
+/* You can add extra specific media queries here if needed */
+
+@media (max-width: 640px) {
+    .font-heading {
+        letter-spacing: -1px;
+    }
+}
