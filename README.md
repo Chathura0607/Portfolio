@@ -94,4 +94,4 @@ Welcome to the official developer portfolio of **Chathura Lakmina** — Full-Sta
 
 ---
 
-Developed with ❤️ by **Chathura Lakmina** | 2025–2026
+Developed by **Chathura Lakmina** | 2025–2026
